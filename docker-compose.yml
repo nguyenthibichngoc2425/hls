@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: hlsdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    container_name: hls-postgres
+    networks:
+      - hls-network
+volumes:
+  pgdata:
+networks:
+  hls-network:
+    driver: bridge

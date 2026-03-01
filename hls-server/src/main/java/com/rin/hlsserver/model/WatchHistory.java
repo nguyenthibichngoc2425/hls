@@ -1,0 +1,47 @@
+package com.rin.hlsserver.model;
+
+import jakarta.persistence.*;
+import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "watch_history", 
+       uniqueConstraints = @UniqueConstraint(columnNames = {"user_id", "movie_id"}),
+       indexes = {
+           @Index(name = "idx_watch_history_user_id", columnList = "user_id"),
+           @Index(name = "idx_watch_history_updated_at", columnList = "updated_at DESC")
+       })
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class WatchHistory {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
+    
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "movie_id", nullable = false)
+    private Movie movie;
+    
+    @CreationTimestamp
+    @Column(name = "created_at", nullable = false, updatable = false)
+    private LocalDateTime createdAt;
+    
+    @Column(name = "updated_at", nullable = false)
+    private LocalDateTime updatedAt;
+    
+    @PrePersist
+    @PreUpdate
+    protected void onUpdate() {
+        updatedAt = LocalDateTime.now();
+    }
+}

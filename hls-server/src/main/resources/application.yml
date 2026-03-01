@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: hls-server
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/hlsdb
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 8080
+  servlet:
+        context-path: /
+        
+app:
+  jwt:
+    signerKey: HDKdDVDEpABtpunTzN2QM2pbmVzDP5jht6WGykegNKgsKDVdDlbzFVmU1vDOVOHV
+  hls:
+    storage-path: C:\hls\data
+
+monitor:
+  online:
+    timeoutSeconds: 15
+  hls:
+    storage-path: C:\hls\data
+  ffmpeg:
+    use-cuda: true
+    segment-duration: 6
