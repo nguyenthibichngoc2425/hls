@@ -30,8 +30,8 @@ public class ApplicationInitConfig {
 
     PasswordEncoder passwordEncoder;
     static String DEFAULT_ADMIN_PASSWORD = "123";
-    static String DEFAULT_ADMIN_EMAIL = "nrin000@yopmail.com";
-    static String DEFAULT_ADMIN_FULLNAME = "Nguyen Rin";
+    static String DEFAULT_ADMIN_EMAIL = "admin@gmail.com";
+    static String DEFAULT_ADMIN_FULLNAME = "Bích Ngọc";
 
     @Bean
     ApplicationRunner applicationRunner(UserRepository userRepository, RoleRepository roleRepository, GenreRepository genreRepository) {
