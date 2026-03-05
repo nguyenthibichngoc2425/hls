@@ -32,7 +32,7 @@ public class VideoPlayerForm extends Form {
     public static class QualityOption {
         public String label;
         public String url;
-        
+
         public QualityOption(String label, String url) {
             this.label = label;
             this.url = url;
