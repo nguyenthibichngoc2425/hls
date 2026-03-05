@@ -26,7 +26,7 @@ public class VideoPlayerForm extends Form {
 
     private final JFXPanel jfxPanel = new JFXPanel();
     private static final String BASE_URL = AppConfig.getAPIBaseUrl();
-    private String movieTitle = "";
+    private String movieTitle = "cunnnn ten phiiiiiiiim";
     private List<QualityOption> qualities = new ArrayList<>();
     
     public static class QualityOption {
