@@ -162,7 +162,7 @@ public class MyDrawerBuilder extends SimpleDrawerBuilder {
     private MenuItem[] createUserMenus() {
         return new MenuItem[]{
                 new Item.Label("PHIM"),
-                new Item("Trang chủ", "dashboard.svg", FormDashboard.class),
+
                 new Item("Phim", "forms.svg", FormAllMovies.class),
                 new Item("Lịch sử xem", "clock.svg", FormWatchHistory.class),
                 new Item("Yêu thích", "heart.svg", FormFavoriteMovies.class),
@@ -177,7 +177,6 @@ public class MyDrawerBuilder extends SimpleDrawerBuilder {
     private MenuItem[] createAdminMenus() {
         return new MenuItem[]{
                 new Item.Label("ADMIN"),
-                new Item("Trang chủ", "dashboard.svg", FormDashboardAdmin.class),
                 new Item("Quản lý phim", "forms.svg", FormMovieManagement.class),
                 new Item("Quản lý thể loại", "forms.svg", FormGenreManagement.class),
                 new Item("Quản lý người dùng", "forms.svg", raven.modal.demo.forms.admin.FormUserManagement.class),

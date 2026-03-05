@@ -6,8 +6,10 @@ import raven.modal.component.SimpleModalBorder;
 import raven.modal.demo.api.AuthApi;
 import raven.modal.demo.auth.Login;
 import raven.modal.demo.component.About;
+import raven.modal.demo.forms.FormAllMovies;
 import raven.modal.demo.forms.FormDashboard;
 import raven.modal.demo.forms.admin.FormDashboardAdmin;
+import raven.modal.demo.forms.admin.FormMovieManagement;
 import raven.modal.demo.menu.MyDrawerBuilder;
 import raven.modal.demo.utils.LogoutStateManager;
 import raven.modal.demo.utils.UndoRedo;
@@ -110,7 +112,7 @@ public class FormManager {
         FORMS.clear();
 
         // mở dashboard user mặc định
-        Drawer.setSelectedItemClass(FormDashboard.class);
+        Drawer.setSelectedItemClass(FormAllMovies.class);
 
         frame.repaint();
         frame.revalidate();
@@ -131,7 +133,7 @@ public class FormManager {
         FORMS.clear();
 
         // mở dashboard admin mặc định
-        Drawer.setSelectedItemClass(FormDashboardAdmin.class);
+        Drawer.setSelectedItemClass(FormMovieManagement.class);
 
         frame.repaint();
         frame.revalidate();

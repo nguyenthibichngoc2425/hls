@@ -1,5 +1,6 @@
 package raven.modal.demo.forms;
 
+import raven.modal.demo.config.AppConfig;
 import raven.modal.demo.dto.response.MovieResponse;
 import raven.modal.demo.dto.response.VideoQualityResponse;
 import raven.modal.demo.menu.MyDrawerBuilder;
@@ -24,7 +25,7 @@ import java.util.List;
 public class VideoPlayerForm extends Form {
 
     private final JFXPanel jfxPanel = new JFXPanel();
-
+    private static final String BASE_URL = AppConfig.getAPIBaseUrl();
     private String movieTitle = "";
     private List<QualityOption> qualities = new ArrayList<>();
     
@@ -96,13 +97,13 @@ public class VideoPlayerForm extends Form {
         if (movie.getVideoQualities() != null && !movie.getVideoQualities().isEmpty()) {
             for (VideoQualityResponse vq : movie.getVideoQualities()) {
                 String quality = vq.getQuality();
-                String url = "http://localhost:8080/api/hls/" + movie.getId() + "/" + quality + "/playlist.m3u8?userEmail=" + userEmail;
+                String url = BASE_URL + "/hls/" + movie.getId() + "/" + quality + "/playlist.m3u8?userEmail=" + userEmail;
                 qualities.add(new QualityOption(quality, url));
             }
         }
         
         if (qualities.isEmpty() && movie.getMasterPlaylistPath() != null) {
-            String masterUrl = "http://localhost:8080/api/hls/" + movie.getId() + "/master.m3u8?userEmail=" + userEmail;
+            String masterUrl = BASE_URL + "/hls/" + movie.getId() + "/master.m3u8?userEmail=" + userEmail;
             qualities.add(new QualityOption("Auto", masterUrl));
         }
     }
