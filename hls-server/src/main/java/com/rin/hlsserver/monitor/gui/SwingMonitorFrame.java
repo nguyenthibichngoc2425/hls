@@ -1,22 +1,22 @@
 package com.rin.hlsserver.monitor.gui;
 
-import com.rin.hlsserver.monitor.model.LogEntry;
 import com.rin.hlsserver.monitor.model.WatchingSession;
-import com.rin.hlsserver.monitor.store.LogStore;
 import com.rin.hlsserver.monitor.store.OnlineWatchingStore;
+import com.rin.hlsserver.model.SystemLog;
+import com.rin.hlsserver.service.SystemLogService;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.swing.*;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableCellRenderer;
 import java.awt.*;
+import java.net.InetAddress;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Swing GUI for monitoring HLS streaming and user activities
@@ -24,16 +24,17 @@ import java.util.stream.Collectors;
 @Slf4j
 public class SwingMonitorFrame extends JFrame {
     
-    private static final DateTimeFormatter TIME_FORMATTER = 
-            DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss").withZone(ZoneId.systemDefault());
-    
-    private final LogStore logStore;
+        private static final DateTimeFormatter TIME_FORMATTER =
+            DateTimeFormatter.ofPattern("HH:mm:ss").withZone(ZoneId.systemDefault());
+
+    private final SystemLogService systemLogService;
     private final OnlineWatchingStore onlineStore;
     
     // Logs tab components
     private JTable logsTable;
     private LogsTableModel logsTableModel;
     private JTextField logsFilterField;
+    private JComboBox<String> eventFilterCombo;
     private JCheckBox logsAutoRefreshCheckbox;
     private Timer logsRefreshTimer;
     
@@ -42,27 +43,58 @@ public class SwingMonitorFrame extends JFrame {
     private OnlineTableModel onlineTableModel;
     private Timer onlineRefreshTimer;
     private JLabel onlineCountLabel;
+
+    private final String serverName;
+    private final int serverPort;
     
-    public SwingMonitorFrame(LogStore logStore, OnlineWatchingStore onlineStore) {
-        this.logStore = logStore;
+    public SwingMonitorFrame(SystemLogService systemLogService, OnlineWatchingStore onlineStore, String serverName, int serverPort) {
+        this.systemLogService = systemLogService;
         this.onlineStore = onlineStore;
+        this.serverName = serverName;
+        this.serverPort = serverPort;
         
         initializeUI();
         startTimers();
     }
     
     private void initializeUI() {
-        setTitle("HLS Monitor - Giám Sát Hệ Thống");
+        setTitle("HLS Monitor - " + serverName + " - Port " + serverPort + " - SHARED DB MODE");
         setSize(1400, 750);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         setLocationRelativeTo(null);
+
+        JPanel rootPanel = new JPanel(new BorderLayout());
+        rootPanel.add(createStatusHeader(), BorderLayout.NORTH);
         
         // Create tabbed pane
         JTabbedPane tabbedPane = new JTabbedPane();
         tabbedPane.addTab("Nhật Ký Hoạt Động", createLogsPanel());
         tabbedPane.addTab("Người Dùng Đang Xem", createOnlinePanel());
-        
-        add(tabbedPane);
+
+        rootPanel.add(tabbedPane, BorderLayout.CENTER);
+        add(rootPanel);
+    }
+
+    private JPanel createStatusHeader() {
+        JPanel headerPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        headerPanel.setBorder(BorderFactory.createEmptyBorder(6, 10, 2, 10));
+        String ip = resolveLocalIp();
+        JLabel statusLabel = new JLabel(serverName + " | " + ip + ":" + serverPort + " | SHARED DB MODE");
+        statusLabel.setFont(statusLabel.getFont().deriveFont(Font.BOLD, 13f));
+        JLabel sourceLabel = new JLabel("Nguồn log: DATABASE (SHARED)");
+        sourceLabel.setBorder(BorderFactory.createEmptyBorder(0, 20, 0, 0));
+        sourceLabel.setFont(sourceLabel.getFont().deriveFont(Font.BOLD, 13f));
+        headerPanel.add(statusLabel);
+        headerPanel.add(sourceLabel);
+        return headerPanel;
+    }
+
+    private String resolveLocalIp() {
+        try {
+            return InetAddress.getLocalHost().getHostAddress();
+        } catch (Exception ignored) {
+            return "127.0.0.1";
+        }
     }
     
     /**
@@ -74,10 +106,15 @@ public class SwingMonitorFrame extends JFrame {
         
         // Top control panel
         JPanel controlPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+
+        controlPanel.add(new JLabel("Event:"));
+        eventFilterCombo = new JComboBox<>(new String[]{"ALL", "LOGIN", "HLS", "ERROR"});
+        eventFilterCombo.addActionListener(e -> refreshLogsTable());
+        controlPanel.add(eventFilterCombo);
         
         controlPanel.add(new JLabel("Tìm kiếm:"));
         logsFilterField = new JTextField(30);
-        logsFilterField.setToolTipText("Lọc theo tài khoản, IP, videoId, chất lượng hoặc hành động");
+        logsFilterField.setToolTipText("Loc theo server, event, user, IP hoac endpoint");
         controlPanel.add(logsFilterField);
         
         JButton applyFilterButton = new JButton("Áp Dụng");
@@ -97,7 +134,7 @@ public class SwingMonitorFrame extends JFrame {
                     "Bạn có chắc muốn xóa tất cả nhật ký?",
                     "Xác Nhận Xóa", JOptionPane.YES_NO_OPTION);
             if (confirm == JOptionPane.YES_OPTION) {
-                logStore.clear();
+                systemLogService.clearAll();
                 refreshLogsTable();
             }
         });
@@ -113,23 +150,22 @@ public class SwingMonitorFrame extends JFrame {
         logsTable = new JTable(logsTableModel);
         logsTable.setAutoCreateRowSorter(true);
         logsTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        logsTable.setDefaultRenderer(Object.class, new EventTypeColorRenderer());
         
         // Column widths
-        logsTable.getColumnModel().getColumn(0).setPreferredWidth(150); // Time
-        logsTable.getColumnModel().getColumn(1).setPreferredWidth(120); // Action
-        logsTable.getColumnModel().getColumn(2).setPreferredWidth(150); // Account
-        logsTable.getColumnModel().getColumn(3).setPreferredWidth(120); // IP
-        logsTable.getColumnModel().getColumn(4).setPreferredWidth(80);  // VideoId
-        logsTable.getColumnModel().getColumn(5).setPreferredWidth(80);  // Quality
-        logsTable.getColumnModel().getColumn(6).setPreferredWidth(200); // Path
-        logsTable.getColumnModel().getColumn(7).setPreferredWidth(200); // Message
+        logsTable.getColumnModel().getColumn(0).setPreferredWidth(90);  // Time
+        logsTable.getColumnModel().getColumn(1).setPreferredWidth(100); // Server
+        logsTable.getColumnModel().getColumn(2).setPreferredWidth(140); // Event
+        logsTable.getColumnModel().getColumn(3).setPreferredWidth(180); // User
+        logsTable.getColumnModel().getColumn(4).setPreferredWidth(120); // IP
+        logsTable.getColumnModel().getColumn(5).setPreferredWidth(420); // Endpoint
         
         // Center align some columns
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
         centerRenderer.setHorizontalAlignment(SwingConstants.CENTER);
+        logsTable.getColumnModel().getColumn(0).setCellRenderer(centerRenderer);
         logsTable.getColumnModel().getColumn(1).setCellRenderer(centerRenderer);
-        logsTable.getColumnModel().getColumn(4).setCellRenderer(centerRenderer);
-        logsTable.getColumnModel().getColumn(5).setCellRenderer(centerRenderer);
+        logsTable.getColumnModel().getColumn(2).setCellRenderer(centerRenderer);
         
         JScrollPane scrollPane = new JScrollPane(logsTable);
         panel.add(scrollPane, BorderLayout.CENTER);
@@ -160,7 +196,7 @@ public class SwingMonitorFrame extends JFrame {
         refreshButton.addActionListener(e -> refreshOnlineTable());
         controlPanel.add(refreshButton);
         
-        onlineCountLabel = new JLabel("Đang xem: 0 người");
+        onlineCountLabel = new JLabel("Dang xem tren " + serverName + ": 0 nguoi");
         onlineCountLabel.setFont(onlineCountLabel.getFont().deriveFont(Font.BOLD, 14f));
         controlPanel.add(Box.createHorizontalStrut(20));
         controlPanel.add(onlineCountLabel);
@@ -195,7 +231,7 @@ public class SwingMonitorFrame extends JFrame {
         
         // Bottom info panel
         JPanel infoPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        infoPanel.add(new JLabel("Tự động làm mới mỗi 2 giây • Người dùng offline sau 15 giây không hoạt động"));
+        infoPanel.add(new JLabel("Auto refresh 2 giay • Tab nay hien thi nguoi dang xem tren " + serverName));
         panel.add(infoPanel, BorderLayout.SOUTH);
         
         return panel;
@@ -230,15 +266,16 @@ public class SwingMonitorFrame extends JFrame {
     private void refreshLogsTable() {
         SwingUtilities.invokeLater(() -> {
             String filterText = logsFilterField.getText().trim().toLowerCase();
-            List<LogEntry> allLogs = logStore.snapshot();
+            String category = String.valueOf(eventFilterCombo.getSelectedItem());
+            List<SystemLog> allLogs = systemLogService.getLatestLogsByCategory(200, category);
             
-            List<LogEntry> filteredLogs;
+            List<SystemLog> filteredLogs;
             if (filterText.isEmpty()) {
                 filteredLogs = allLogs;
             } else {
                 filteredLogs = allLogs.stream()
                         .filter(log -> matchesFilter(log, filterText))
-                        .collect(Collectors.toList());
+                        .toList();
             }
             
             logsTableModel.setData(filteredLogs);
@@ -248,13 +285,17 @@ public class SwingMonitorFrame extends JFrame {
     /**
      * Check if log entry matches filter
      */
-    private boolean matchesFilter(LogEntry log, String filterText) {
-        return (log.getAccount() != null && log.getAccount().toLowerCase().contains(filterText)) ||
-               (log.getIp() != null && log.getIp().toLowerCase().contains(filterText)) ||
-               (log.getVideoId() != null && log.getVideoId().toLowerCase().contains(filterText)) ||
-               (log.getQuality() != null && log.getQuality().toLowerCase().contains(filterText)) ||
-               (log.getAction() != null && log.getAction().name().toLowerCase().contains(filterText)) ||
-               (log.getMessage() != null && log.getMessage().toLowerCase().contains(filterText));
+    private boolean matchesFilter(SystemLog log, String filterText) {
+        return containsIgnoreCase(log.getServerName(), filterText)
+                || containsIgnoreCase(log.getEventType(), filterText)
+                || containsIgnoreCase(log.getUserEmail(), filterText)
+                || containsIgnoreCase(log.getIpAddress(), filterText)
+                || containsIgnoreCase(log.getEndpoint(), filterText)
+                || containsIgnoreCase(log.getMessage(), filterText);
+    }
+
+    private boolean containsIgnoreCase(String value, String filterText) {
+        return value != null && value.toLowerCase().contains(filterText);
     }
     
     /**
@@ -268,7 +309,7 @@ public class SwingMonitorFrame extends JFrame {
             sessions.sort(Comparator.comparing(WatchingSession::getLastSeen).reversed());
             
             onlineTableModel.setData(sessions);
-            onlineCountLabel.setText("Đang xem: " + sessions.size() + " người");
+            onlineCountLabel.setText("Dang xem tren " + serverName + ": " + sessions.size() + " nguoi");
         });
     }
     
@@ -288,19 +329,19 @@ public class SwingMonitorFrame extends JFrame {
      * Table model for logs
      */
     private static class LogsTableModel extends AbstractTableModel {
-        private final String[] columnNames = {"Thời Gian", "Hành Động", "Tài Khoản", "Địa Chỉ IP", "Video ID", "Chất Lượng", "Đường Dẫn", "Thông Báo"};
-        private List<LogEntry> data = new ArrayList<>();
+        private final String[] columnNames = {"Time", "Server", "Event", "User", "IP", "Endpoint"};
+        private List<SystemLog> data = new ArrayList<>();
         private JLabel countLabel;
         
         public void setCountLabel(JLabel label) {
             this.countLabel = label;
         }
         
-        public void setData(List<LogEntry> data) {
+        public void setData(List<SystemLog> data) {
             this.data = data;
             fireTableDataChanged();
             if (countLabel != null) {
-                countLabel.setText("Tổng số nhật ký: " + data.size());
+                countLabel.setText("Tong so ban ghi: " + data.size());
             }
         }
         
@@ -321,18 +362,54 @@ public class SwingMonitorFrame extends JFrame {
         
         @Override
         public Object getValueAt(int rowIndex, int columnIndex) {
-            LogEntry log = data.get(rowIndex);
+            SystemLog log = data.get(rowIndex);
             switch (columnIndex) {
-                case 0: return TIME_FORMATTER.format(log.getTime());
-                case 1: return log.getAction() != null ? log.getAction().name() : "";
-                case 2: return log.getAccount() != null ? log.getAccount() : "";
-                case 3: return log.getIp() != null ? log.getIp() : "";
-                case 4: return log.getVideoId() != null ? log.getVideoId() : "";
-                case 5: return log.getQuality() != null ? log.getQuality() : "";
-                case 6: return log.getPath() != null ? log.getPath() : "";
-                case 7: return log.getMessage() != null ? log.getMessage() : "";
+                case 0: return log.getCreatedAt() != null
+                        ? TIME_FORMATTER.format(log.getCreatedAt().atZone(ZoneId.systemDefault()).toInstant()) : "";
+                case 1: return safe(log.getServerName());
+                case 2: return safe(log.getEventType());
+                case 3: return safe(log.getUserEmail());
+                case 4: return safe(log.getIpAddress());
+                case 5: return safe(log.getEndpoint());
                 default: return "";
             }
+        }
+
+        private String safe(String value) {
+            return value == null ? "" : value;
+        }
+
+        public String getEventTypeAt(int rowIndex) {
+            if (rowIndex < 0 || rowIndex >= data.size()) {
+                return "";
+            }
+            String eventType = data.get(rowIndex).getEventType();
+            return eventType == null ? "" : eventType;
+        }
+    }
+
+    private class EventTypeColorRenderer extends DefaultTableCellRenderer {
+        @Override
+        public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected,
+                                                       boolean hasFocus, int row, int column) {
+            Component component = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+            if (isSelected) {
+                return component;
+            }
+
+            int modelRow = table.convertRowIndexToModel(row);
+            String eventType = logsTableModel.getEventTypeAt(modelRow);
+
+            if (eventType.startsWith("LOGIN") || eventType.equals("LOGOUT")) {
+                component.setForeground(new Color(20, 128, 42));
+            } else if (eventType.startsWith("HLS")) {
+                component.setForeground(new Color(0, 74, 173));
+            } else if (eventType.equals("ERROR")) {
+                component.setForeground(new Color(194, 24, 7));
+            } else {
+                component.setForeground(Color.DARK_GRAY);
+            }
+            return component;
         }
     }
     

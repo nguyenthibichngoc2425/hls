@@ -37,11 +37,17 @@ public class MovieService {
     private final VideoProcessingTaskRepository taskRepository;
     private final FFmpegService ffmpegService;
     private final ApplicationContext applicationContext;
+    private final SystemLogService systemLogService;
+
+    @org.springframework.beans.factory.annotation.Value("${app.server-name:SERVER-UNKNOWN}")
+    private String serverName;
     
     /**
      * Lấy tất cả movies
      */
     public List<MovieResponse> getAllMovies() {
+        systemLogService.save("API_REQUEST", "/api/movies", "anonymous", "unknown",
+                "Lay danh sach movie");
         return movieRepository.findAll().stream()
                 .map(MovieResponse::fromEntity)
                 .collect(Collectors.toList());
@@ -51,6 +57,8 @@ public class MovieService {
      * Tìm kiếm movies theo tên (chỉ lấy status PUBLISHED)
      */
     public List<MovieResponse> searchMovies(String keyword) {
+        systemLogService.save("API_REQUEST", "/api/movies/search", "anonymous", "unknown",
+                "keyword=" + keyword);
         return movieRepository.findByTitleContainingIgnoreCaseAndStatus(keyword, Movie.MovieStatus.PUBLISHED).stream()
                 .map(MovieResponse::fromEntity)
                 .collect(Collectors.toList());
@@ -60,6 +68,8 @@ public class MovieService {
      * Lấy movie theo ID
      */
     public MovieResponse getMovieById(Long id) {
+        systemLogService.save("API_REQUEST", "/api/movies/" + id, "anonymous", "unknown",
+                "Lay chi tiet movie");
         Movie movie = movieRepository.findByIdWithQualities(id)
                 .orElseThrow(() -> new AppException(BaseErrorCode.MOVIE_NOT_FOUND));
         return MovieResponse.fromEntity(movie);
@@ -96,6 +106,8 @@ public class MovieService {
         
         movie = movieRepository.save(movie);
         log.info("Created movie with ID: {}", movie.getId());
+        systemLogService.save("API_REQUEST", "/api/movies", "anonymous", "unknown",
+            "Tao movie id=" + movie.getId() + " title=" + movie.getTitle());
         
         // Nếu processingMinutes > 0, bắt đầu xử lý video async
         if (request.getProcessingMinutes() > 0) {
@@ -113,6 +125,8 @@ public class MovieService {
             
             // Xử lý async - đợi transaction commit xong mới chạy
             log.info("Controller returning response immediately, video processing in background...");
+                systemLogService.save("API_REQUEST", "/api/movies/process", "anonymous", "unknown",
+                    "Bat dau xu ly nen movieId=" + movie.getId());
             Long finalTaskId = task.getId();
             Long finalMovieId = movie.getId();
             TransactionSynchronizationManager.registerSynchronization(new TransactionSynchronization() {
@@ -179,6 +193,8 @@ public class MovieService {
                 
                 movie = movieRepository.save(movie);
                 log.info("Update returning immediately, video processing in background...");
+                systemLogService.save("API_REQUEST", "/api/movies/" + movie.getId(), "anonymous", "unknown",
+                    "Cap nhat movie va xu ly lai video");
                 
                 Long finalTaskId = task.getId();
                 Long finalMovieId = movie.getId();
@@ -215,6 +231,8 @@ public class MovieService {
         movieRepository.delete(movie);
         
         log.info("Deleted movie with ID: {}", id);
+        systemLogService.save("API_REQUEST", "/api/movies/" + id, "anonymous", "unknown",
+            "Xoa movie");
     }
     
     /**
@@ -256,6 +274,8 @@ public class MovieService {
         task = taskRepository.saveAndFlush(task); // Flush ngay
         
         log.info("Reprocess returning immediately, video processing in background...");
+        systemLogService.save("API_REQUEST", "/api/movies/" + movie.getId() + "/reprocess", "anonymous", "unknown",
+            "Reprocess movie");
         
         Long finalTaskId = task.getId();
         Long finalMovieId = movie.getId();
@@ -275,6 +295,8 @@ public class MovieService {
     @Async
     public void processVideoAsync(Long movieId, Long taskId) {
         log.info("Starting async video processing for movie ID: {}, task ID: {}", movieId, taskId);
+        systemLogService.save("API_REQUEST", "/api/movies/process", "system", "127.0.0.1",
+            "Async xu ly movieId=" + movieId + " taskId=" + taskId);
         
         VideoProcessingTask task = taskRepository.findById(taskId)
                 .orElseThrow(() -> new RuntimeException("Task not found"));
@@ -306,6 +328,8 @@ public class MovieService {
                                 taskRepository.save(task);
                                 movieRepository.save(movie);
                                 log.info("Updated progress for movie {}: {}%", movieId, progress);
+                                systemLogService.save("API_REQUEST", "/api/movies/process", "system", "127.0.0.1",
+                                    "Tien do movieId=" + movieId + ": " + progress + "%");
                             } catch (Exception e) {
                                 log.error("Error updating progress", e);
                             }
@@ -331,9 +355,13 @@ public class MovieService {
             taskRepository.save(task);
             
             log.info("Successfully completed video processing for movie ID: {}", movieId);
+                systemLogService.save("API_REQUEST", "/api/movies/process", "system", "127.0.0.1",
+                    "Xu ly video thanh cong movieId=" + movieId);
             
         } catch (Exception e) {
             log.error("Error processing video for movie ID: {}", movieId, e);
+                systemLogService.save("ERROR", "/api/movies/process", "system", "127.0.0.1",
+                    "Xu ly video that bai movieId=" + movieId + " reason=" + e.getMessage());
             
             // Update movie status
             movie.setStatus(Movie.MovieStatus.FAILED);

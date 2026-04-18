@@ -1,9 +1,10 @@
 package com.rin.hlsserver.monitor.gui;
 
-import com.rin.hlsserver.monitor.store.LogStore;
 import com.rin.hlsserver.monitor.store.OnlineWatchingStore;
+import com.rin.hlsserver.service.SystemLogService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
@@ -19,9 +20,15 @@ import java.awt.*;
 @RequiredArgsConstructor
 @Slf4j
 public class SwingMonitorLauncher implements ApplicationRunner {
-    
-    private final LogStore logStore;
+
+    private final SystemLogService systemLogService;
     private final OnlineWatchingStore onlineStore;
+
+    @Value("${app.server-name:SERVER-UNKNOWN}")
+    private String serverName;
+
+    @Value("${server.port:8080}")
+    private int serverPort;
     
     @Override
     public void run(ApplicationArguments args) {
@@ -44,7 +51,7 @@ public class SwingMonitorLauncher implements ApplicationRunner {
                 UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
                 
                 // Create and show frame
-                SwingMonitorFrame frame = new SwingMonitorFrame(logStore, onlineStore);
+                SwingMonitorFrame frame = new SwingMonitorFrame(systemLogService, onlineStore, serverName, serverPort);
                 frame.setVisible(true);
                 log.info("HLS Monitor GUI launched successfully");
                 

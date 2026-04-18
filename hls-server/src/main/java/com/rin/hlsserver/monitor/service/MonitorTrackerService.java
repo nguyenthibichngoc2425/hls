@@ -1,15 +1,12 @@
 package com.rin.hlsserver.monitor.service;
 
-import com.rin.hlsserver.monitor.model.LogEntry;
-import com.rin.hlsserver.monitor.model.LogEntry.LogAction;
-import com.rin.hlsserver.monitor.store.LogStore;
 import com.rin.hlsserver.monitor.store.OnlineWatchingStore;
+import com.rin.hlsserver.service.SystemLogService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-
-import java.time.Instant;
 
 /**
  * Service for tracking user activities and online sessions
@@ -18,54 +15,39 @@ import java.time.Instant;
 @RequiredArgsConstructor
 @Slf4j
 public class MonitorTrackerService {
-    
-    private final LogStore logStore;
+
+    private final SystemLogService systemLogService;
     private final OnlineWatchingStore onlineStore;
+
+    @Value("${app.server-name:SERVER-UNKNOWN}")
+    private String serverName;
+
+    @Value("${server.port:0}")
+    private String serverPort;
     
     /**
      * Track successful login
      */
     public void trackLoginSuccess(String account, String ip) {
-        LogEntry entry = LogEntry.builder()
-                .time(Instant.now())
-                .action(LogAction.LOGIN_SUCCESS)
-                .account(account)
-                .ip(ip)
-                .message("Login successful")
-                .build();
-        logStore.add(entry);
-        log.debug("Tracked login success: account={}, ip={}", account, ip);
+        systemLogService.save("LOGIN_SUCCESS", "/api/auth/login", account, ip, serverPort,
+                "Dang nhap thanh cong");
+        log.info("[{}][AUTH] Đăng nhập thành công user={} ip={}", serverName, account, ip);
     }
     
     /**
      * Track failed login
      */
     public void trackLoginFail(String email, String ip, String reason) {
-        LogEntry entry = LogEntry.builder()
-                .time(Instant.now())
-                .action(LogAction.LOGIN_FAIL)
-                .account(email)
-                .ip(ip)
-                .message("Login failed: " + reason)
-                .build();
-        logStore.add(entry);
-        log.debug("Tracked login fail: email={}, ip={}, reason={}", email, ip, reason);
+        systemLogService.save("LOGIN_FAIL", "/api/auth/login", email, ip, serverPort, reason);
+        log.warn("[{}][AUTH] Đăng nhập thất bại user={} ip={} reason={}", serverName, email, ip, reason);
     }
     
     /**
      * Track logout
      */
     public void trackLogout(String account, String ip) {
-        LogEntry entry = LogEntry.builder()
-                .time(Instant.now())
-                .action(LogAction.LOGOUT)
-                .account(account)
-                .ip(ip)
-                .message("Logged out")
-                .build();
-        logStore.add(entry);
-        System.out.println("[LOGOUT] User " + account + " logged out at " + entry.getTime());
-        log.debug("Tracked logout: account={}, ip={}", account, ip);
+        systemLogService.save("LOGOUT", "/api/auth/logout", account, ip, serverPort, "Dang xuat");
+        log.info("[{}][AUTH] Đăng xuất user={} ip={}", serverName, account, ip);
     }
     
     /**
@@ -73,20 +55,11 @@ public class MonitorTrackerService {
      */
     public void trackMasterPlaylist(HttpServletRequest request, String account, String videoId) {
         String ip = extractIp(request);
-        String userAgent = extractUserAgent(request);
         String path = request.getRequestURI();
         
-        LogEntry entry = LogEntry.builder()
-                .time(Instant.now())
-                .action(LogAction.HLS_MASTER)
-                .account(account)
-                .ip(ip)
-                .videoId(videoId)
-                .path(path)
-                .message("Master playlist requested")
-                .build();
-        logStore.add(entry);
-        log.debug("Tracked master playlist: account={}, ip={}, videoId={}", account, ip, videoId);
+        systemLogService.save("HLS_MASTER", path, account, ip, serverPort,
+                "movieId=" + videoId);
+        log.info("[{}][HLS] Request master.m3u8 movieId={} account={} ip={}", serverName, videoId, account, ip);
     }
     
     /**
@@ -97,23 +70,13 @@ public class MonitorTrackerService {
         String userAgent = extractUserAgent(request);
         String path = request.getRequestURI();
         
-        // Log the request
-        LogEntry entry = LogEntry.builder()
-                .time(Instant.now())
-                .action(LogAction.HLS_PLAYLIST)
-                .account(account)
-                .ip(ip)
-                .videoId(videoId)
-                .quality(quality)
-                .path(path)
-                .message("Playlist requested")
-                .build();
-        logStore.add(entry);
+        systemLogService.save("HLS_PLAYLIST", path, account, ip, serverPort,
+            "movieId=" + videoId + ", quality=" + quality);
         
         // Update online session
         onlineStore.upsertSession(account, ip, videoId, quality, userAgent);
         
-        log.debug("Tracked playlist: account={}, ip={}, videoId={}, quality={}", account, ip, videoId, quality);
+        log.info("[{}][HLS] Trả playlist movieId={} quality={} account={} ip={}", serverName, videoId, quality, account, ip);
     }
     
     /**
@@ -124,24 +87,14 @@ public class MonitorTrackerService {
         String userAgent = extractUserAgent(request);
         String path = request.getRequestURI();
         
-        // Log the request
-        LogEntry entry = LogEntry.builder()
-                .time(Instant.now())
-                .action(LogAction.HLS_SEGMENT)
-                .account(account)
-                .ip(ip)
-                .videoId(videoId)
-                .quality(quality)
-                .path(path)
-                .message("Segment: " + segmentName)
-                .build();
-        logStore.add(entry);
+        systemLogService.save("HLS_SEGMENT", path, account, ip, serverPort,
+            "movieId=" + videoId + ", quality=" + quality + ", segment=" + segmentName);
         
         // Update online session
         onlineStore.upsertSession(account, ip, videoId, quality, userAgent);
         
-        log.debug("Tracked segment: account={}, ip={}, videoId={}, quality={}, segment={}", 
-                account, ip, videoId, quality, segmentName);
+        log.info("[{}][HLS] Trả segment {} movieId={} quality={} account={} ip={}", 
+            serverName, segmentName, videoId, quality, account, ip);
     }
     
     /**

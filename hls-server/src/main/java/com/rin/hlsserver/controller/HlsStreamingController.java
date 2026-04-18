@@ -6,6 +6,7 @@ import com.rin.hlsserver.model.Movie;
 import com.rin.hlsserver.monitor.service.MonitorTrackerService;
 import com.rin.hlsserver.monitor.util.JwtHelper;
 import com.rin.hlsserver.repository.MovieRepository;
+import com.rin.hlsserver.service.SystemLogService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -29,9 +30,13 @@ public class HlsStreamingController {
     
     private final MovieRepository movieRepository;
     private final MonitorTrackerService monitorTrackerService;
+    private final SystemLogService systemLogService;
 
     @Value("${app.hls.storage-path:/home/nrin31266/hls-data/videos/hls}")
     private String hlsStoragePath;
+
+    @Value("${app.server-name:SERVER-UNKNOWN}")
+    private String serverName;
 
     /**
      * GET /api/hls/{movieId}/master.m3u8
@@ -42,7 +47,7 @@ public class HlsStreamingController {
             @PathVariable Long movieId,
             @RequestParam(required = false) String userEmail,
             HttpServletRequest request) throws IOException {
-        log.info("GET /api/hls/{}/master.m3u8", movieId);
+        log.info("[{}][HLS] Request master.m3u8 movieId={}", serverName, movieId);
         
         Movie movie = movieRepository.findById(movieId)
                 .orElseThrow(() -> new AppException(BaseErrorCode.MOVIE_NOT_FOUND));
@@ -87,8 +92,7 @@ public class HlsStreamingController {
             @PathVariable String quality,
             @RequestParam(required = false) String userEmail,
             HttpServletRequest request) throws IOException {
-        
-        log.info("GET /api/hls/{}/{}/playlist.m3u8", movieId, quality);
+        log.info("[{}][HLS] Request playlist movieId={} quality={}", serverName, movieId, quality);
         
         // Validate quality
         if (!quality.equals("360p") && !quality.equals("720p")) {
@@ -137,8 +141,7 @@ public class HlsStreamingController {
             @RequestParam(required = false) String userEmail,
             @RequestHeader(value = "Range", required = false) String range,
             HttpServletRequest request) throws IOException {
-        
-        log.info("GET /api/hls/{}/{}/{}", movieId, quality, segmentName);
+        log.info("[{}][HLS] Request segment {} movieId={} quality={}", serverName, segmentName, movieId, quality);
         
         // Validate quality
         if (!quality.equals("360p") && !quality.equals("720p")) {
@@ -173,6 +176,7 @@ public class HlsStreamingController {
 
         // Handle range requests for better streaming
         if (range == null || range.isEmpty()) {
+            log.info("[{}][HLS] Trả segment {} movieId={} quality={}", serverName, segmentName, movieId, quality);
             return ResponseEntity.ok()
                     .headers(headers)
                     .contentLength(fileLength)
@@ -185,7 +189,7 @@ public class HlsStreamingController {
             String[] parts = range.replace("bytes=", "").split("-");
             start = Long.parseLong(parts[0]);
         } catch (Exception e) {
-            log.warn("Invalid range header: {}", range);
+            log.warn("[{}][HLS] Range header không hợp lệ: {}", serverName, range);
         }
 
         long end = Math.min(start + CHUNK_SIZE - 1, fileLength - 1);
@@ -203,8 +207,12 @@ public class HlsStreamingController {
      * Kiểm tra movie có sẵn sàng để stream không
      */
     @GetMapping("/{movieId}/ready")
-    public ResponseEntity<Boolean> checkMovieReady(@PathVariable Long movieId) {
-        log.info("GET /api/hls/{}/ready", movieId);
+    public ResponseEntity<Boolean> checkMovieReady(@PathVariable Long movieId, HttpServletRequest request) {
+        log.info("[{}][HLS] Kiểm tra sẵn sàng stream movieId={}", serverName, movieId);
+        String email = JwtHelper.extractEmailFromRequest(request);
+        String ip = extractIp(request);
+        systemLogService.save("API_REQUEST", request.getRequestURI(), email, ip,
+                "check-ready movieId=" + movieId);
         
         Movie movie = movieRepository.findById(movieId)
                 .orElseThrow(() -> new AppException(BaseErrorCode.MOVIE_NOT_FOUND));
@@ -213,5 +221,19 @@ public class HlsStreamingController {
                        movie.getMasterPlaylistPath() != null;
         
         return ResponseEntity.ok(ready);
+    }
+
+    private String extractIp(HttpServletRequest request) {
+        String ip = request.getHeader("X-Forwarded-For");
+        if (ip == null || ip.isBlank() || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getHeader("X-Real-IP");
+        }
+        if (ip == null || ip.isBlank() || "unknown".equalsIgnoreCase(ip)) {
+            ip = request.getRemoteAddr();
+        }
+        if (ip != null && ip.contains(",")) {
+            ip = ip.split(",")[0].trim();
+        }
+        return ip != null ? ip : "unknown";
     }
 }

@@ -1,0 +1,70 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2026-04-18T04:55:19.526+07:00  INFO 125944 --- [hls-server] [           main] com.rin.hlsserver.HlsServerApplication   : Starting HlsServerApplication using Java 21 with PID 125944 (/home/nrin31266/IdeaProjects/hls/hls-server/target/classes started by nrin31266 in /home/nrin31266/IdeaProjects/hls/hls-server)
+2026-04-18T04:55:19.527+07:00  INFO 125944 --- [hls-server] [           main] com.rin.hlsserver.HlsServerApplication   : The following 1 profile is active: "server-b"
+2026-04-18T04:55:19.905+07:00  INFO 125944 --- [hls-server] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-18T04:55:19.943+07:00  INFO 125944 --- [hls-server] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 9 JPA repository interfaces.
+2026-04-18T04:55:20.246+07:00  INFO 125944 --- [hls-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-04-18T04:55:20.257+07:00  INFO 125944 --- [hls-server] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-18T04:55:20.258+07:00  INFO 125944 --- [hls-server] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-04-18T04:55:20.283+07:00  INFO 125944 --- [hls-server] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 731 ms
+2026-04-18T04:55:20.349+07:00  INFO 125944 --- [hls-server] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-18T04:55:20.371+07:00  INFO 125944 --- [hls-server] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-04-18T04:55:20.570+07:00  INFO 125944 --- [hls-server] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-18T04:55:20.587+07:00  INFO 125944 --- [hls-server] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-18T04:55:20.646+07:00  INFO 125944 --- [hls-server] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@a1cb94
+2026-04-18T04:55:20.647+07:00  INFO 125944 --- [hls-server] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-18T04:55:20.680+07:00  INFO 125944 --- [hls-server] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/hlsdb]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 13.23
+	Default catalog/schema: hlsdb/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-18T04:55:21.326+07:00  INFO 125944 --- [hls-server] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-18T04:55:21.410+07:00  INFO 125944 --- [hls-server] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-18T04:55:21.452+07:00  INFO 125944 --- [hls-server] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+✅ JVM Default Timezone Set: Asia/Ho_Chi_Minh
+2026-04-18T04:55:22.014+07:00  INFO 125944 --- [hls-server] [           main] c.r.h.config.ApplicationInitConfig       : Initializing application.....
+2026-04-18T04:55:22.028+07:00  WARN 125944 --- [hls-server] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-18T04:55:22.361+07:00  INFO 125944 --- [hls-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-04-18T04:55:22.366+07:00  INFO 125944 --- [hls-server] [           main] com.rin.hlsserver.HlsServerApplication   : Started HlsServerApplication in 3.077 seconds (process running for 3.25)
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password_hash,u1_0.status,u1_0.updated_at from users u1_0 where u1_0.email=?
+Hibernate: select g1_0.id from genres g1_0 where g1_0.genre_id=? fetch first ? rows only
+Hibernate: select g1_0.id from genres g1_0 where g1_0.genre_id=? fetch first ? rows only
+Hibernate: select g1_0.id from genres g1_0 where g1_0.genre_id=? fetch first ? rows only
+2026-04-18T04:55:22.455+07:00  INFO 125944 --- [hls-server] [           main] c.r.h.config.ApplicationInitConfig       : Default genres checked/created successfully
+2026-04-18T04:55:22.456+07:00  INFO 125944 --- [hls-server] [           main] c.r.h.monitor.gui.SwingMonitorLauncher   : Attempting to launch HLS Monitor GUI...
+2026-04-18T04:55:22.775+07:00  INFO 125944 --- [hls-server] [WT-EventQueue-0] c.r.h.monitor.gui.SwingMonitorLauncher   : HLS Monitor GUI launched successfully
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-18T04:55:22.909+07:00  INFO 125944 --- [hls-server] [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-18T04:55:22.909+07:00  INFO 125944 --- [hls-server] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-18T04:55:22.911+07:00  INFO 125944 --- [hls-server] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-04-18T04:55:22.914+07:00  INFO 125944 --- [hls-server] [nio-8082-exec-1] c.r.h.config.RequestLoggingFilter        : [SERVER-B][API_REQUEST] GET /api/movies user=anonymous ip=127.0.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-18T04:55:22.952+07:00  WARN 125944 --- [hls-server] [nio-8082-exec-1] c.r.h.c.RandomFailureSimulationFilter    : [SERVER-B][SIM] Giả lập lỗi 500 tại /api/movies (rate=0.2)
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-18T04:55:35.240+07:00  INFO 125944 --- [hls-server] [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-18T04:55:35.242+07:00  INFO 125944 --- [hls-server] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-18T04:55:35.245+07:00  INFO 125944 --- [hls-server] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-18T04:55:35.247+07:00  INFO 125944 --- [hls-server] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-18T04:55:35.248+07:00  INFO 125944 --- [hls-server] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -32,11 +32,16 @@ import java.util.UUID;
 public class AuthService {
     UserRepository userRepository;
     RoleRepository roleRepository;
+    SystemLogService systemLogService;
     static String DEFAULT_ROLE = "USER";
     static long JWT_EXPIRATION_MS = 86400000; // 1 day
     @Value("${app.jwt.signerKey}")
     @NonFinal
     String JWT_SECRET;
+
+    @Value("${app.server-name:SERVER-UNKNOWN}")
+    @NonFinal
+    String serverName;
     PasswordEncoder passwordEncoder;
 
 
@@ -56,6 +61,8 @@ public class AuthService {
                 .build();
 
         userRepository.save(newUser);
+        systemLogService.save("API_REQUEST", "/api/auth/register", email, "unknown",
+            "Dang ky thanh cong");
 
         return buildAuthResponse(newUser);
     }

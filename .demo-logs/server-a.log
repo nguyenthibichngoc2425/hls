@@ -1,0 +1,169 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.0)
+
+2026-04-18T16:09:41.439+07:00  INFO 39324 --- [hls-server] [           main] com.rin.hlsserver.HlsServerApplication   : Starting HlsServerApplication using Java 21 with PID 39324 (/home/nrin31266/IdeaProjects/hls/hls-server/target/classes started by nrin31266 in /home/nrin31266/IdeaProjects/hls/hls-server)
+2026-04-18T16:09:41.441+07:00  INFO 39324 --- [hls-server] [           main] com.rin.hlsserver.HlsServerApplication   : The following 1 profile is active: "server-a"
+2026-04-18T16:09:41.784+07:00  INFO 39324 --- [hls-server] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-18T16:09:41.818+07:00  INFO 39324 --- [hls-server] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 9 JPA repository interfaces.
+2026-04-18T16:09:42.093+07:00  INFO 39324 --- [hls-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-18T16:09:42.100+07:00  INFO 39324 --- [hls-server] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-18T16:09:42.100+07:00  INFO 39324 --- [hls-server] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-04-18T16:09:42.121+07:00  INFO 39324 --- [hls-server] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 657 ms
+2026-04-18T16:09:42.182+07:00  INFO 39324 --- [hls-server] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-18T16:09:42.203+07:00  INFO 39324 --- [hls-server] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-04-18T16:09:42.388+07:00  INFO 39324 --- [hls-server] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-18T16:09:42.404+07:00  INFO 39324 --- [hls-server] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-18T16:09:42.448+07:00  INFO 39324 --- [hls-server] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@a1cb94
+2026-04-18T16:09:42.449+07:00  INFO 39324 --- [hls-server] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-18T16:09:42.481+07:00  INFO 39324 --- [hls-server] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/hlsdb]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 13.23
+	Default catalog/schema: hlsdb/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DatasourceConnectionProviderImpl
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-18T16:09:43.089+07:00  INFO 39324 --- [hls-server] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-18T16:09:43.167+07:00  INFO 39324 --- [hls-server] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-18T16:09:43.204+07:00  INFO 39324 --- [hls-server] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+✅ JVM Default Timezone Set: Asia/Ho_Chi_Minh
+2026-04-18T16:09:43.718+07:00  INFO 39324 --- [hls-server] [           main] c.r.h.config.ApplicationInitConfig       : Initializing application.....
+2026-04-18T16:09:43.732+07:00  WARN 39324 --- [hls-server] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-18T16:09:44.046+07:00  INFO 39324 --- [hls-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-04-18T16:09:44.051+07:00  INFO 39324 --- [hls-server] [           main] com.rin.hlsserver.HlsServerApplication   : Started HlsServerApplication in 2.825 seconds (process running for 2.99)
+2026-04-18T16:09:44.072+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-18T16:09:44.072+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-18T16:09:44.073+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-18T16:09:44.075+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-1] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/movies user=anonymous ip=127.0.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password_hash,u1_0.status,u1_0.updated_at from users u1_0 where u1_0.email=?
+Hibernate: select g1_0.id from genres g1_0 where g1_0.genre_id=? fetch first ? rows only
+2026-04-18T16:09:44.124+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-1] c.r.h.controller.MovieController         : GET /api/movies - Get all movies
+Hibernate: select g1_0.id from genres g1_0 where g1_0.genre_id=? fetch first ? rows only
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+Hibernate: select g1_0.id from genres g1_0 where g1_0.genre_id=? fetch first ? rows only
+2026-04-18T16:09:44.126+07:00  INFO 39324 --- [hls-server] [           main] c.r.h.config.ApplicationInitConfig       : Default genres checked/created successfully
+2026-04-18T16:09:44.127+07:00  INFO 39324 --- [hls-server] [           main] c.r.h.monitor.gui.SwingMonitorLauncher   : Attempting to launch HLS Monitor GUI...
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0
+2026-04-18T16:09:44.402+07:00  INFO 39324 --- [hls-server] [WT-EventQueue-0] c.r.h.monitor.gui.SwingMonitorLauncher   : HLS Monitor GUI launched successfully
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-18T16:09:47.214+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-2] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/movies user=anonymous ip=127.0.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-18T16:09:47.220+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-2] c.r.h.controller.MovieController         : GET /api/movies - Get all movies
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only

@@ -1,0 +1,8 @@
+server:
+  port: 8081
+
+app:
+  server-name: SERVER-A
+  server-id: A
+  simulation:
+    failureRate: ${APP_SIMULATION_FAILURERATE:0.0}
