@@ -41,7 +41,7 @@ public class TestForm extends BaseFrame {
                 hide.addActionListener(e1 -> setVisible(false));
                 ModalDialog.showModal(this, new SimpleModalBorder(hide, "Test"));
             });
-            MyMenuValidation.setUser(new ModelUser("Ra Ven", "raven@gmail.com", ModelUser.Role.ADMIN));
+            MyMenuValidation.setUser(new ModelUser(1L,"Ra Ven", "raven@gmail.com", ModelUser.Role.ADMIN));
             Drawer.installDrawer(this, MyDrawerBuilder.getInstance());
             setLayout(new MigLayout("al center center"));
             add(show);
