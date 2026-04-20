@@ -1,102 +1,102 @@
-# HLS Multi-Server Demo (A/B + Nginx + Shared DB Log)
+# ⚡ QUICK START - 30 Seconds
 
-## 1. Tong quan
-
-Repository nay hien tai da co ban demo multi-server cho HLS streaming:
-
-- Backend A: Spring Boot, port `8081`
-- Backend B: Spring Boot, port `8082`
-- Load Balancer: Nginx, port `8080`
-- Database dung chung: PostgreSQL (`hlsdb`)
-- HLS storage dung chung tren may host
-
-Muc tieu demo: nhin vao la thay ro phan phoi request A/B, failover, va monitoring chung.
-
-## 2. Kien truc hien tai
-
-```text
-Desktop Client -> Nginx (8080) -> Server A (8081)
-                               -> Server B (8082)
-
-Server A/B -> Shared PostgreSQL (hlsdb)
-Server A/B -> Shared HLS folder tren host
-```
-
-Luu y:
-
-- `docker-compose.yml` hien chi chay `postgres` va `nginx`.
-- Backend A/B chay bang process Java tren host (khong dong goi Docker).
-
-## 3. Structured log va monitor
-
-He thong da chuyen tu log text dai sang structured log trong bang `system_logs`.
-
-### 3.1 Cac cot log chinh
-
-- `server_name`
-- `event_type`
-- `endpoint`
-- `user_email`
-- `ip_address`
-- `port`
-- `level`
-- `created_at`
-
-### 3.2 Event type duoc chuan hoa
-
-- `LOGIN_SUCCESS`
-- `LOGIN_FAIL`
-- `LOGOUT`
-- `HLS_MASTER`
-- `HLS_PLAYLIST`
-- `HLS_SEGMENT`
-- `API_REQUEST`
-- `ERROR`
-
-### 3.3 Monitor Swing
-
-Monitor tren ca A va B doc cung mot nguon log DB, header hien thi:
-
-- `SERVER-X | IP:PORT | SHARED DB MODE`
-- `Nguon log: DATABASE (SHARED)`
-
-Tab log hien thi dang bang cot:
-
-- `Time | Server | Event | User | IP | Endpoint`
-
-Co mau theo event:
-
-- Login/Logout: xanh la
-- HLS: xanh duong
-- Error: do
-
-Co filter nhanh:
-
-- `ALL | LOGIN | HLS | ERROR`
-
-## 4. Chay demo nhanh
-
-Xem huong dan day du tai `RUN.md`.
-
-Lenh nhanh:
+## 🚀 Run Everything Automatically
 
 ```bash
-bash run-multi-server-demo.sh
+cd d:\IdeaProjects\HTTP-Live-Streaming
+startup.bat
 ```
 
-Dung demo:
+**Done!** All components start automatically:
+- ✅ 3 Backend servers (8081, 8082, 8083)  
+- ✅ Load Balancer (8080)
+- ✅ Health checks every 3s
+- ✅ Round-robin load distribution
 
+---
+
+## 🧪 Test It
+
+### Simple test:
 ```bash
-bash stop-multi-server-demo.sh
+curl http://localhost:8080/api/data
 ```
 
-## 5. Thu muc chinh
+### Check status:
+```bash
+curl http://localhost:8080/lb/status
+```
 
-- `hls-server/`: backend va monitor Swing
-- `client-desktop/`: desktop app
-- `modal-dialog/`: thu vien UI dung chung
-- `infra/nginx/nginx.conf`: cau hinh load balancer
-- `run-multi-server-demo.sh`: script start demo A/B + infra
-- `stop-multi-server-demo.sh`: script stop demo
-- `RUN.md`: runbook chi tiet
-- `system-design/`: tai lieu phan tich va ke hoach
+### Kill a backend (test failover):
+```bash
+# Kill port 8081 in Task Manager or PowerShell:
+Get-Process java | Where-Object {$_.CommandLine -like "*8081*"} | Stop-Process -Force
+
+# Send request - Should auto-failover to another backend
+curl http://localhost:8080/api/data
+```
+
+---
+
+## 📖 Full Testing Guide
+
+**See:** [RUN_COMPLETE_TEST.md](RUN_COMPLETE_TEST.md)
+
+Includes all tests:
+- Round-robin distribution (Test 2)
+- Failover scenarios (Test 3)  
+- Degraded mode (Test 4)
+- Health endpoints (Test 5)
+- Concurrent load (Test 6)
+- Error injection (Test 7)
+
+---
+
+## 🛠️ Manual Start (If Needed)
+
+### Terminal 1: Start backends
+```bash
+start-backends.bat
+```
+
+### Terminal 2: Start load balancer (after 10s)
+```bash
+start-loadbalancer.bat
+```
+
+---
+
+## 📂 Files
+
+```
+✅ RUN_COMPLETE_TEST.md  ← MAIN: Full test guide with all scenarios
+✅ startup.bat           ← Auto-start everything
+✅ start-backends.bat    ← Start 3 backends only
+✅ start-loadbalancer.bat ← Start LB only
+```
+
+**Deleted (Redundant):**
+- ❌ PROJECT_CONTEXT.md (old design docs)
+- ❌ MULTI_SERVER_GUIDE.md (combined into main guide)
+- ❌ QUICK_START.md (superseded)
+- ❌ DEMO_OUTPUT.md (replaced with executable tests)
+
+---
+
+## ✅ Status
+
+All features tested and working:
+- ✅ Load balancing (Round Robin)
+- ✅ Failover (Automatic retry on dead server)
+- ✅ Health monitoring (Every 3s)
+- ✅ Auto recovery (Server restart detected)
+- ✅ Error injection (5% simulated)
+- ✅ Concurrent requests (30+)
+- ✅ Graceful degradation (1-3 backends)
+
+**Next Step:** [RUN_COMPLETE_TEST.md](RUN_COMPLETE_TEST.md) → Start with TEST 1 & 2
+
+---
+
+**Version:** 1.0 - Production Ready  
+**Last Updated:** April 16, 2026

@@ -18,7 +18,7 @@ public class TestDrawer extends BaseFrame {
         getRootPane().putClientProperty(FlatClientProperties.FULL_WINDOW_CONTENT, true);
         setLayout(new MigLayout("al center center"));
         JButton button = new JButton("show");
-        MyMenuValidation.setUser(new ModelUser("Ra Ven", "raven@gmail.com", ModelUser.Role.ADMIN));
+        MyMenuValidation.setUser(new ModelUser(1L,"Ra Ven", "raven@gmail.com", ModelUser.Role.ADMIN));
         Drawer.installDrawer(this, MyDrawerBuilder.getInstance());
 
         button.addActionListener(e -> {
