@@ -6,3 +6,7 @@ app:
   server-id: A
   simulation:
     failureRate: ${APP_SIMULATION_FAILURE_RATE:0.0}
+    viewer:
+      max-active-per-server: ${APP_VIEWER_MAX_ACTIVE_PER_SERVER:2}
+      ttl-seconds: ${APP_VIEWER_TTL_SECONDS:20}
+      cleanup-interval-ms: ${APP_VIEWER_CLEANUP_INTERVAL_MS:5000}

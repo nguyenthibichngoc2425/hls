@@ -1,5 +1,6 @@
 package com.rin.hlsserver.monitor.gui;
 
+import com.rin.hlsserver.loadbalancer.LoadSimulationInterceptor;
 import com.rin.hlsserver.monitor.model.WatchingSession;
 import com.rin.hlsserver.monitor.store.OnlineWatchingStore;
 import com.rin.hlsserver.model.SystemLog;
@@ -11,6 +12,7 @@ import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableCellRenderer;
 import java.awt.*;
 import java.net.InetAddress;
+import java.time.Duration;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
@@ -29,6 +31,7 @@ public class SwingMonitorFrame extends JFrame {
 
     private final SystemLogService systemLogService;
     private final OnlineWatchingStore onlineStore;
+    private final LoadSimulationInterceptor loadSimulationInterceptor;
     
     // Logs tab components
     private JTable logsTable;
@@ -44,12 +47,20 @@ public class SwingMonitorFrame extends JFrame {
     private Timer onlineRefreshTimer;
     private JLabel onlineCountLabel;
 
+    // Slot limiter tab components
+    private JTable slotTable;
+    private SlotTableModel slotTableModel;
+    private JLabel slotCountLabel;
+
     private final String serverName;
     private final int serverPort;
     
-    public SwingMonitorFrame(SystemLogService systemLogService, OnlineWatchingStore onlineStore, String serverName, int serverPort) {
+    public SwingMonitorFrame(SystemLogService systemLogService, OnlineWatchingStore onlineStore,
+                             LoadSimulationInterceptor loadSimulationInterceptor,
+                             String serverName, int serverPort) {
         this.systemLogService = systemLogService;
         this.onlineStore = onlineStore;
+        this.loadSimulationInterceptor = loadSimulationInterceptor;
         this.serverName = serverName;
         this.serverPort = serverPort;
         
@@ -70,6 +81,7 @@ public class SwingMonitorFrame extends JFrame {
         JTabbedPane tabbedPane = new JTabbedPane();
         tabbedPane.addTab("Nhật Ký Hoạt Động", createLogsPanel());
         tabbedPane.addTab("Người Dùng Đang Xem", createOnlinePanel());
+        tabbedPane.addTab("Slot Streaming Active", createSlotPanel());
 
         rootPanel.add(tabbedPane, BorderLayout.CENTER);
         add(rootPanel);
@@ -236,6 +248,43 @@ public class SwingMonitorFrame extends JFrame {
         
         return panel;
     }
+
+    private JPanel createSlotPanel() {
+        JPanel panel = new JPanel(new BorderLayout(5, 5));
+        panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+
+        JPanel controlPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JButton refreshButton = new JButton("Làm Mới Slot");
+        refreshButton.addActionListener(e -> refreshSlotTable());
+        controlPanel.add(refreshButton);
+
+        slotCountLabel = new JLabel("Slot active: 0/0");
+        slotCountLabel.setFont(slotCountLabel.getFont().deriveFont(Font.BOLD, 14f));
+        controlPanel.add(Box.createHorizontalStrut(20));
+        controlPanel.add(slotCountLabel);
+        panel.add(controlPanel, BorderLayout.NORTH);
+
+        slotTableModel = new SlotTableModel();
+        slotTable = new JTable(slotTableModel);
+        slotTable.setAutoCreateRowSorter(true);
+        slotTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+
+        slotTable.getColumnModel().getColumn(0).setPreferredWidth(260); // Viewer
+        slotTable.getColumnModel().getColumn(1).setPreferredWidth(180); // Last Seen
+        slotTable.getColumnModel().getColumn(2).setPreferredWidth(120); // Idle
+
+        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+        centerRenderer.setHorizontalAlignment(SwingConstants.CENTER);
+        slotTable.getColumnModel().getColumn(1).setCellRenderer(centerRenderer);
+        slotTable.getColumnModel().getColumn(2).setCellRenderer(centerRenderer);
+
+        panel.add(new JScrollPane(slotTable), BorderLayout.CENTER);
+
+        JPanel infoPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        infoPanel.add(new JLabel("Auto refresh 2 giay • Slot cap theo server de demo failover"));
+        panel.add(infoPanel, BorderLayout.SOUTH);
+        return panel;
+    }
     
     /**
      * Start auto-refresh timers
@@ -249,14 +298,18 @@ public class SwingMonitorFrame extends JFrame {
         });
         logsRefreshTimer.start();
         
-        // Online refresh timer (2 seconds)
-        onlineRefreshTimer = new Timer(2000, e -> refreshOnlineTable());
+        // Online + slot refresh timer (2 seconds)
+        onlineRefreshTimer = new Timer(2000, e -> {
+            refreshOnlineTable();
+            refreshSlotTable();
+        });
         onlineRefreshTimer.start();
         
         // Initial refresh
         SwingUtilities.invokeLater(() -> {
             refreshLogsTable();
             refreshOnlineTable();
+            refreshSlotTable();
         });
     }
     
@@ -310,6 +363,18 @@ public class SwingMonitorFrame extends JFrame {
             
             onlineTableModel.setData(sessions);
             onlineCountLabel.setText("Dang xem tren " + serverName + ": " + sessions.size() + " nguoi");
+        });
+    }
+
+    private void refreshSlotTable() {
+        SwingUtilities.invokeLater(() -> {
+            List<LoadSimulationInterceptor.ViewerLease> slots = loadSimulationInterceptor.getActiveViewerSnapshot();
+            slotTableModel.setData(slots);
+
+            int active = loadSimulationInterceptor.getActiveViewerCount();
+            int max = loadSimulationInterceptor.getMaxActiveViewers();
+            int ttlSeconds = loadSimulationInterceptor.getViewerTtlSeconds();
+            slotCountLabel.setText("Slot active: " + active + "/" + max + " (TTL=" + ttlSeconds + "s)");
         });
     }
     
@@ -465,6 +530,48 @@ public class SwingMonitorFrame extends JFrame {
                     return ua;
                 }
                 default: return "";
+            }
+        }
+    }
+
+    private static class SlotTableModel extends AbstractTableModel {
+        private final String[] columnNames = {"Viewer", "Last Seen", "Idle"};
+        private List<LoadSimulationInterceptor.ViewerLease> data = new ArrayList<>();
+
+        public void setData(List<LoadSimulationInterceptor.ViewerLease> data) {
+            this.data = data;
+            fireTableDataChanged();
+        }
+
+        @Override
+        public int getRowCount() {
+            return data.size();
+        }
+
+        @Override
+        public int getColumnCount() {
+            return columnNames.length;
+        }
+
+        @Override
+        public String getColumnName(int column) {
+            return columnNames[column];
+        }
+
+        @Override
+        public Object getValueAt(int rowIndex, int columnIndex) {
+            LoadSimulationInterceptor.ViewerLease lease = data.get(rowIndex);
+            switch (columnIndex) {
+                case 0:
+                    return lease.viewerId();
+                case 1:
+                    return TIME_FORMATTER.format(Instant.ofEpochMilli(lease.lastSeenEpochMillis()));
+                case 2: {
+                    long idleSec = Duration.between(Instant.ofEpochMilli(lease.lastSeenEpochMillis()), Instant.now()).getSeconds();
+                    return idleSec + "s";
+                }
+                default:
+                    return "";
             }
         }
     }

@@ -24,6 +24,11 @@ app:
         signerKey: HDKdDVDEpABtpunTzN2QM2pbmVzDP5jht6WGykegNKgsKDVdDlbzFVmU1vDOVOHV
     hls:
         storage-path: C:\hls\data
+    simulation:
+        viewer:
+            max-active-per-server: 2
+            ttl-seconds: 20
+            cleanup-interval-ms: 5000
 
 logging:
     level:

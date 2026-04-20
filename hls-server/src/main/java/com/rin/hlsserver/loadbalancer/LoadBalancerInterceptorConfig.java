@@ -19,7 +19,7 @@ public class LoadBalancerInterceptorConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(loadSimulationInterceptor)
-            .addPathPatterns("/api/**", "/hls/**")
+            .addPathPatterns("/api/hls/**")
             .order(1);
     }
 }

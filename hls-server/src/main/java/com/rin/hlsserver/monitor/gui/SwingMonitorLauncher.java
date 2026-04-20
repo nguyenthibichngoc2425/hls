@@ -1,5 +1,6 @@
 package com.rin.hlsserver.monitor.gui;
 
+import com.rin.hlsserver.loadbalancer.LoadSimulationInterceptor;
 import com.rin.hlsserver.monitor.store.OnlineWatchingStore;
 import com.rin.hlsserver.service.SystemLogService;
 import lombok.RequiredArgsConstructor;
@@ -23,6 +24,7 @@ public class SwingMonitorLauncher implements ApplicationRunner {
 
     private final SystemLogService systemLogService;
     private final OnlineWatchingStore onlineStore;
+    private final LoadSimulationInterceptor loadSimulationInterceptor;
 
     @Value("${app.server-name:SERVER-UNKNOWN}")
     private String serverName;
@@ -51,7 +53,7 @@ public class SwingMonitorLauncher implements ApplicationRunner {
                 UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
                 
                 // Create and show frame
-                SwingMonitorFrame frame = new SwingMonitorFrame(systemLogService, onlineStore, serverName, serverPort);
+                SwingMonitorFrame frame = new SwingMonitorFrame(systemLogService, onlineStore, loadSimulationInterceptor, serverName, serverPort);
                 frame.setVisible(true);
                 log.info("HLS Monitor GUI launched successfully");
                 
