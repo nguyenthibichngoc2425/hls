@@ -8,6 +8,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.net.URL;
 
+import static javax.swing.text.StyleConstants.setIcon;
+
 public class IconMultiSelectItemRenderer extends DefaultMultiSelectItemRenderer {
 
     public static void apply(JMultiSelectComboBox<?> multiSelect) {

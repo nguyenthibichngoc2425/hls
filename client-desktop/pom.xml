@@ -87,21 +87,21 @@
             <artifactId>rsyntaxtextarea</artifactId>
             <version>3.4.0</version>
         </dependency>
-        
+
         <!-- WebP image support -->
         <dependency>
             <groupId>org.sejda.imageio</groupId>
             <artifactId>webp-imageio</artifactId>
             <version>0.1.6</version>
         </dependency>
-        
+
         <!-- VLCJ for native video playback -->
         <dependency>
             <groupId>uk.co.caprica</groupId>
             <artifactId>vlcj</artifactId>
             <version>4.8.0</version>
         </dependency>
-        
+
         <!-- JavaFX for embedded web player -->
         <dependency>
             <groupId>org.openjfx</groupId>

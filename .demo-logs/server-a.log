@@ -1,3 +1,7 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/C:/Users/ADMIN/.m2/wrapper/dists/apache-maven-3.9.11/a2d47e15/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -8,162 +12,205 @@
 
  :: Spring Boot ::                (v4.0.0)
 
-2026-04-18T16:09:41.439+07:00  INFO 39324 --- [hls-server] [           main] com.rin.hlsserver.HlsServerApplication   : Starting HlsServerApplication using Java 21 with PID 39324 (/home/nrin31266/IdeaProjects/hls/hls-server/target/classes started by nrin31266 in /home/nrin31266/IdeaProjects/hls/hls-server)
-2026-04-18T16:09:41.441+07:00  INFO 39324 --- [hls-server] [           main] com.rin.hlsserver.HlsServerApplication   : The following 1 profile is active: "server-a"
-2026-04-18T16:09:41.784+07:00  INFO 39324 --- [hls-server] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-04-18T16:09:41.818+07:00  INFO 39324 --- [hls-server] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 9 JPA repository interfaces.
-2026-04-18T16:09:42.093+07:00  INFO 39324 --- [hls-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
-2026-04-18T16:09:42.100+07:00  INFO 39324 --- [hls-server] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-18T16:09:42.100+07:00  INFO 39324 --- [hls-server] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-04-18T16:09:42.121+07:00  INFO 39324 --- [hls-server] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 657 ms
-2026-04-18T16:09:42.182+07:00  INFO 39324 --- [hls-server] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-04-18T16:09:42.203+07:00  INFO 39324 --- [hls-server] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-04-18T16:09:42.388+07:00  INFO 39324 --- [hls-server] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-04-18T16:09:42.404+07:00  INFO 39324 --- [hls-server] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-04-18T16:09:42.448+07:00  INFO 39324 --- [hls-server] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@a1cb94
-2026-04-18T16:09:42.449+07:00  INFO 39324 --- [hls-server] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-04-18T16:09:42.481+07:00  INFO 39324 --- [hls-server] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/hlsdb]
-	Database driver: PostgreSQL JDBC Driver
+2026-04-20T21:55:57.744+07:00  INFO 3388 --- [hls-server] [           main] com.rin.hlsserver.HlsServerApplication   : Starting HlsServerApplication using Java 25.0.2 with PID 3388 (D:\IdeaProjects\HTTP-Live-Streaming\hls-server\target\classes started by ADMIN in D:\IdeaProjects\HTTP-Live-Streaming\hls-server)
+2026-04-20T21:55:57.746+07:00 DEBUG 3388 --- [hls-server] [           main] com.rin.hlsserver.HlsServerApplication   : Running with Spring Boot v4.0.0, Spring v7.0.1
+2026-04-20T21:55:57.747+07:00  INFO 3388 --- [hls-server] [           main] com.rin.hlsserver.HlsServerApplication   : The following 1 profile is active: "server-a"
+2026-04-20T21:55:58.395+07:00  INFO 3388 --- [hls-server] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-20T21:55:58.458+07:00  INFO 3388 --- [hls-server] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 9 JPA repository interfaces.
+2026-04-20T21:55:58.914+07:00  INFO 3388 --- [hls-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-20T21:55:58.930+07:00  INFO 3388 --- [hls-server] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-20T21:55:58.930+07:00  INFO 3388 --- [hls-server] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-04-20T21:55:58.984+07:00  INFO 3388 --- [hls-server] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1197 ms
+2026-04-20T21:55:59.109+07:00  INFO 3388 --- [hls-server] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-20T21:55:59.177+07:00  INFO 3388 --- [hls-server] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-04-20T21:55:59.609+07:00  INFO 3388 --- [hls-server] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-20T21:55:59.641+07:00  INFO 3388 --- [hls-server] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-20T21:56:00.713+07:00  WARN 3388 --- [hls-server] [           main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 22023
+2026-04-20T21:56:00.713+07:00  WARN 3388 --- [hls-server] [           main] org.hibernate.orm.jdbc.error             : FATAL: invalid value for parameter "TimeZone": "Asia/Saigon"
+2026-04-20T21:56:00.716+07:00  WARN 3388 --- [hls-server] [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query JDBC database metadata
+
+org.hibernate.exception.DataException: Unable to obtain isolated JDBC connection [FATAL: invalid value for parameter "TimeZone": "Asia/Saigon"] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:84) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:355) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:149) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:127) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:82) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:262) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:255) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:207) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:185) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1395) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1475) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1457) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-7.0.1.jar:7.0.1]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:433) ~[spring-orm-7.0.1.jar:7.0.1]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:416) ~[spring-orm-7.0.1.jar:7.0.1]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-7.0.1.jar:7.0.1]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:409) ~[spring-orm-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:356) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1712) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1461) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1704) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1382) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1221) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1704) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1382) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1221) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.1.jar:7.0.1]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:231) ~[spring-boot-4.0.0.jar:4.0.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:185) ~[spring-boot-4.0.0.jar:4.0.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:180) ~[spring-boot-4.0.0.jar:4.0.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:165) ~[spring-boot-4.0.0.jar:4.0.0]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:97) ~[spring-boot-4.0.0.jar:4.0.0]
+	at org.springframework.boot.web.context.servlet.WebApplicationContextInitializer.initialize(WebApplicationContextInitializer.java:53) ~[spring-boot-4.0.0.jar:4.0.0]
+	at org.springframework.boot.tomcat.servlet.DeferredServletContainerInitializers.onStartup(DeferredServletContainerInitializers.java:55) ~[spring-boot-tomcat-4.0.0.jar:4.0.0]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4416) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:149) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:767) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1162) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1158) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:81) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:149) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:714) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:201) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:410) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:864) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:435) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.boot.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:131) ~[spring-boot-tomcat-4.0.0.jar:4.0.0]
+	at org.springframework.boot.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:110) ~[spring-boot-tomcat-4.0.0.jar:4.0.0]
+	at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:408) ~[spring-boot-tomcat-4.0.0.jar:4.0.0]
+	at org.springframework.boot.tomcat.servlet.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:166) ~[spring-boot-tomcat-4.0.0.jar:4.0.0]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:190) ~[spring-boot-web-server-4.0.0.jar:4.0.0]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:164) ~[spring-boot-web-server-4.0.0.jar:4.0.0]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:614) ~[spring-context-7.0.1.jar:7.0.1]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.0.jar:4.0.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:765) ~[spring-boot-4.0.0.jar:4.0.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:454) ~[spring-boot-4.0.0.jar:4.0.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.0.jar:4.0.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1374) ~[spring-boot-4.0.0.jar:4.0.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-4.0.0.jar:4.0.0]
+	at com.rin.hlsserver.HlsServerApplication.main(HlsServerApplication.java:14) ~[classes/:na]
+Caused by: org.postgresql.util.PSQLException: FATAL: invalid value for parameter "TimeZone": "Asia/Saigon"
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2736) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2861) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:178) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:344) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:57) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:279) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.Driver.makeConnection(Driver.java:448) ~[postgresql-42.7.8.jar:42.7.8]
+	at org.postgresql.Driver.connect(Driver.java:298) ~[postgresql-42.7.8.jar:42.7.8]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:138) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:499) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48) ~[hibernate-core-7.1.8.Final.jar:7.1.8.Final]
+	... 122 common frames omitted
+
+2026-04-20T21:56:00.738+07:00  WARN 3388 --- [hls-server] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-20T21:56:00.745+07:00  INFO 3388 --- [hls-server] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
 	Database dialect: PostgreSQLDialect
-	Database version: 13.23
-	Default catalog/schema: hlsdb/public
+	Database version: 13.0
+	Default catalog/schema: unknown/unknown
 	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
+	Isolation level: NONE [default NONE]
+	JDBC fetch size: undefined/unknown
 	Pool: DatasourceConnectionProviderImpl
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-04-18T16:09:43.089+07:00  INFO 39324 --- [hls-server] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-04-18T16:09:43.167+07:00  INFO 39324 --- [hls-server] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-04-18T16:09:43.204+07:00  INFO 39324 --- [hls-server] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-✅ JVM Default Timezone Set: Asia/Ho_Chi_Minh
-2026-04-18T16:09:43.718+07:00  INFO 39324 --- [hls-server] [           main] c.r.h.config.ApplicationInitConfig       : Initializing application.....
-2026-04-18T16:09:43.732+07:00  WARN 39324 --- [hls-server] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-04-18T16:09:44.046+07:00  INFO 39324 --- [hls-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
-2026-04-18T16:09:44.051+07:00  INFO 39324 --- [hls-server] [           main] com.rin.hlsserver.HlsServerApplication   : Started HlsServerApplication in 2.825 seconds (process running for 2.99)
-2026-04-18T16:09:44.072+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-04-18T16:09:44.072+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-04-18T16:09:44.073+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-04-18T16:09:44.075+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-1] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/movies user=anonymous ip=127.0.0.1
-Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
-Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password_hash,u1_0.status,u1_0.updated_at from users u1_0 where u1_0.email=?
-Hibernate: select g1_0.id from genres g1_0 where g1_0.genre_id=? fetch first ? rows only
-2026-04-18T16:09:44.124+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-1] c.r.h.controller.MovieController         : GET /api/movies - Get all movies
-Hibernate: select g1_0.id from genres g1_0 where g1_0.genre_id=? fetch first ? rows only
-Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
-Hibernate: select g1_0.id from genres g1_0 where g1_0.genre_id=? fetch first ? rows only
-2026-04-18T16:09:44.126+07:00  INFO 39324 --- [hls-server] [           main] c.r.h.config.ApplicationInitConfig       : Default genres checked/created successfully
-2026-04-18T16:09:44.127+07:00  INFO 39324 --- [hls-server] [           main] c.r.h.monitor.gui.SwingMonitorLauncher   : Attempting to launch HLS Monitor GUI...
-Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0
-2026-04-18T16:09:44.402+07:00  INFO 39324 --- [hls-server] [WT-EventQueue-0] c.r.h.monitor.gui.SwingMonitorLauncher   : HLS Monitor GUI launched successfully
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-2026-04-18T16:09:47.214+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-2] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/movies user=anonymous ip=127.0.0.1
-Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
-2026-04-18T16:09:47.220+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-2] c.r.h.controller.MovieController         : GET /api/movies - Get all movies
-Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
-Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T21:56:01.772+07:00  INFO 3388 --- [hls-server] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-20T21:56:01.784+07:00  INFO 3388 --- [hls-server] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-20T21:56:01.846+07:00  INFO 3388 --- [hls-server] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-20T21:56:02.337+07:00 DEBUG 3388 --- [hls-server] [           main] c.r.h.config.RequestLoggingFilter        : Filter 'requestLoggingFilter' configured for use
+2026-04-20T21:56:02.337+07:00 DEBUG 3388 --- [hls-server] [           main] c.r.h.c.RandomFailureSimulationFilter    : Filter 'randomFailureSimulationFilter' configured for use
+? JVM Default Timezone Set: Asia/Ho_Chi_Minh
+2026-04-20T21:56:02.579+07:00  INFO 3388 --- [hls-server] [           main] c.r.h.config.ApplicationInitConfig       : Initializing application.....
+2026-04-20T21:56:02.600+07:00  WARN 3388 --- [hls-server] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-20T21:56:03.122+07:00  INFO 3388 --- [hls-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-04-20T21:56:03.129+07:00  INFO 3388 --- [hls-server] [           main] com.rin.hlsserver.HlsServerApplication   : Started HlsServerApplication in 5.749 seconds (process running for 6.105)
+2026-04-20T21:56:03.221+07:00  INFO 3388 --- [hls-server] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-20T21:56:03.251+07:00  INFO 3388 --- [hls-server] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@41d73414
+2026-04-20T21:56:03.252+07:00  INFO 3388 --- [hls-server] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-20T21:56:03.329+07:00  INFO 3388 --- [hls-server] [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-20T21:56:03.329+07:00  INFO 3388 --- [hls-server] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-20T21:56:03.331+07:00  INFO 3388 --- [hls-server] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-04-20T21:56:03.336+07:00  INFO 3388 --- [hls-server] [nio-8081-exec-1] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/movies user=anonymous ip=127.0.0.1
+2026-04-20T21:56:03.336+07:00  INFO 3388 --- [hls-server] [           main] c.r.h.config.ApplicationInitConfig       : Default genres checked/created successfully
+2026-04-20T21:56:03.336+07:00  INFO 3388 --- [hls-server] [           main] c.r.h.monitor.gui.SwingMonitorLauncher   : Attempting to launch HLS Monitor GUI...
+2026-04-20T21:56:03.444+07:00  INFO 3388 --- [hls-server] [nio-8081-exec-1] c.r.h.l.LoadSimulationInterceptor        : [PORT:8081] Request started. Active requests: 1
+2026-04-20T21:56:03.452+07:00  INFO 3388 --- [hls-server] [nio-8081-exec-1] c.r.h.controller.MovieController         : GET /api/movies - Get all movies
+2026-04-20T21:56:03.586+07:00  INFO 3388 --- [hls-server] [nio-8081-exec-1] c.r.h.l.LoadSimulationInterceptor        : [PORT:8081] Request completed. Active requests: 0
+2026-04-20T21:56:03.981+07:00  INFO 3388 --- [hls-server] [WT-EventQueue-0] c.r.h.monitor.gui.SwingMonitorLauncher   : HLS Monitor GUI launched successfully
