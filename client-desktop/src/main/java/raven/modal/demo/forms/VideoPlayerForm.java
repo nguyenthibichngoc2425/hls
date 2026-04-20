@@ -365,6 +365,18 @@ public class VideoPlayerForm extends Form {
                     var qualities = __QUALITIES_JSON__;
                     var currentSrc = "";
                     var hls = null;
+                    var recoveryTimer = null;
+                    var networkRecoveryAttempts = 0;
+                    var maxNetworkRecoveryAttempts = 12;
+                    var startupRecoveryAttempts = 0;
+                    var maxStartupRecoveryAttempts = 6;
+                    var nativeRecoveryAttempts = 0;
+                    var maxNativeRecoveryAttempts = 20;
+                    var recoveryInProgress = false;
+                    var lastProgressTime = Date.now();
+                    var lastPlaybackPosition = 0;
+                    var progressWatchdog = null;
+                    var resilienceHooksBound = false;
                     
                     var playIcon = document.getElementById('play-icon');
                     var seekBar = document.getElementById('seek-bar');
@@ -380,26 +392,234 @@ public class VideoPlayerForm extends Form {
                         renderQualities();
                     }
 
+                    function clearRecoveryTimer() {
+                        if (recoveryTimer) {
+                            clearTimeout(recoveryTimer);
+                            recoveryTimer = null;
+                        }
+                    }
+
+                    function withRetryQuery(url) {
+                        var sep = url.indexOf('?') >= 0 ? '&' : '?';
+                        return url + sep + 'retryTs=' + Date.now();
+                    }
+
+                    function clearProgressWatchdog() {
+                        if (progressWatchdog) {
+                            clearInterval(progressWatchdog);
+                            progressWatchdog = null;
+                        }
+                    }
+
+                    function bindResilienceHooks() {
+                        if (resilienceHooksBound) return;
+                        resilienceHooksBound = true;
+
+                        video.addEventListener('timeupdate', function() {
+                            lastProgressTime = Date.now();
+                            lastPlaybackPosition = video.currentTime || 0;
+                        });
+
+                        video.addEventListener('stalled', function() {
+                            console.warn('[PLAYER] stalled event detected');
+                            recoverNativePlayback('stalled');
+                        });
+
+                        video.addEventListener('waiting', function() {
+                            // waiting can be normal buffer wait, watchdog decides if it is a real freeze.
+                            console.warn('[PLAYER] waiting event detected');
+                        });
+
+                        video.addEventListener('error', function() {
+                            console.error('[PLAYER] native video error', video.error);
+                            recoverNativePlayback('video_error');
+                        });
+
+                        progressWatchdog = setInterval(function() {
+                            if (!currentSrc) return;
+                            if (video.paused || video.ended) return;
+
+                            var now = Date.now();
+                            var noProgressMs = now - lastProgressTime;
+                            var moved = Math.abs((video.currentTime || 0) - lastPlaybackPosition);
+
+                            if (moved > 0.05) {
+                                lastPlaybackPosition = video.currentTime || 0;
+                                lastProgressTime = now;
+                                return;
+                            }
+
+                            if (noProgressMs > 4500) {
+                                console.warn('[PLAYER] watchdog detected frozen playback for ' + noProgressMs + 'ms');
+                                recoverNativePlayback('watchdog_no_progress_' + noProgressMs);
+                            }
+                        }, 1500);
+                    }
+
+                    function recoverNativePlayback(reason) {
+                        if (recoveryInProgress) return;
+                        if (!currentSrc) return;
+
+                        if (nativeRecoveryAttempts >= maxNativeRecoveryAttempts) {
+                            console.error('[PLAYER] recovery limit reached; reloading full source. reason=' + reason);
+                            nativeRecoveryAttempts = 0;
+                            loadSource(currentSrc);
+                            return;
+                        }
+
+                        recoveryInProgress = true;
+                        nativeRecoveryAttempts++;
+
+                        var resumeTime = Math.max(0, (video.currentTime || 0) - 0.25);
+                        var shouldResume = !video.paused;
+                        var retryUrl = withRetryQuery(currentSrc);
+
+                        console.warn('[PLAYER] recover attempt=' + nativeRecoveryAttempts + ' reason=' + reason + ' resume=' + resumeTime);
+
+                        video.src = retryUrl;
+                        video.load();
+
+                        var done = false;
+                        function finishRecovery(success) {
+                            if (done) return;
+                            done = true;
+                            recoveryInProgress = false;
+                            if (success) {
+                                lastProgressTime = Date.now();
+                            }
+                        }
+
+                        video.addEventListener('loadedmetadata', function() {
+                            try {
+                                video.currentTime = resumeTime;
+                            } catch (e) {
+                                console.warn('[PLAYER] seek after recovery failed', e);
+                            }
+                            if (shouldResume) {
+                                video.play().catch(function(err) {
+                                    console.warn('[PLAYER] play after recovery failed', err);
+                                });
+                            }
+                            finishRecovery(true);
+                        }, { once: true });
+
+                        setTimeout(function() {
+                            if (!done) {
+                                console.warn('[PLAYER] recovery metadata timeout, will allow next retry');
+                                finishRecovery(false);
+                            }
+                        }, 3000);
+                    }
+
+                    function scheduleNetworkRecovery() {
+                        if (!hls) return;
+                        if (networkRecoveryAttempts >= maxNetworkRecoveryAttempts) {
+                            console.error('[HLS] Max network recovery attempts reached, reloading source...');
+                            loadSource(currentSrc);
+                            return;
+                        }
+
+                        clearRecoveryTimer();
+                        var delayMs = Math.min(8000, 400 * Math.pow(2, networkRecoveryAttempts));
+                        networkRecoveryAttempts++;
+                        recoveryTimer = setTimeout(function() {
+                            if (!hls) return;
+                            console.warn('[HLS] Retry segment load attempt=' + networkRecoveryAttempts + ' delay=' + delayMs + 'ms');
+                            try {
+                                hls.startLoad(-1);
+                            } catch (e) {
+                                console.error('[HLS] startLoad failed', e);
+                            }
+                        }, delayMs);
+                    }
+
                     function loadSource(url) {
                         currentSrc = url;
                         var currentTime = video.currentTime;
                         var isPlaying = !video.paused;
+                        networkRecoveryAttempts = 0;
+                        startupRecoveryAttempts = 0;
+                        nativeRecoveryAttempts = 0;
+                        lastProgressTime = Date.now();
+                        lastPlaybackPosition = currentTime || 0;
+                        clearRecoveryTimer();
+                        bindResilienceHooks();
 
                         if (Hls.isSupported()) {
                             if(hls) { hls.destroy(); }
-                            hls = new Hls();
+                            hls = new Hls({
+                                manifestLoadingMaxRetry: 6,
+                                manifestLoadingRetryDelay: 500,
+                                levelLoadingMaxRetry: 6,
+                                levelLoadingRetryDelay: 500,
+                                fragLoadingMaxRetry: 10,
+                                fragLoadingRetryDelay: 500,
+                                fragLoadingMaxRetryTimeout: 20000,
+                                startFragPrefetch: true
+                            });
                             hls.loadSource(url);
                             hls.attachMedia(video);
                             hls.on(Hls.Events.MANIFEST_PARSED, function() {
                                video.currentTime = currentTime;
                                if(isPlaying) video.play();
                             });
+                            hls.on(Hls.Events.FRAG_LOADING, function() {
+                                lastProgressTime = Date.now();
+                            });
+                            hls.on(Hls.Events.FRAG_LOADED, function() {
+                                networkRecoveryAttempts = 0;
+                                clearRecoveryTimer();
+                                lastProgressTime = Date.now();
+                            });
+                            hls.on(Hls.Events.ERROR, function(event, data) {
+                                if (!data) return;
+
+                                console.warn('[HLS] error type=' + data.type + ' details=' + data.details + ' fatal=' + data.fatal);
+
+                                if (data.type === Hls.ErrorTypes.NETWORK_ERROR) {
+                                    scheduleNetworkRecovery();
+                                }
+
+                                if (data.fatal) {
+                                    if (data.type === Hls.ErrorTypes.NETWORK_ERROR) {
+                                        scheduleNetworkRecovery();
+                                    } else if (data.type === Hls.ErrorTypes.MEDIA_ERROR) {
+                                        try {
+                                            hls.recoverMediaError();
+                                        } catch (e) {
+                                            loadSource(currentSrc);
+                                        }
+                                    } else {
+                                        loadSource(currentSrc);
+                                    }
+                                }
+                            });
                         } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                            video.src = url;
+                            var startupUrl = withRetryQuery(url);
+                            video.src = startupUrl;
                             video.currentTime = currentTime;
                             video.addEventListener('loadedmetadata', function() {
                                if(isPlaying) video.play();
                             }, {once:true});
+
+                            // Startup watchdog: if entering player and no metadata in time, retry source.
+                            var startupGuard = setInterval(function() {
+                                if (video.readyState >= 1) {
+                                    clearInterval(startupGuard);
+                                    return;
+                                }
+
+                                if (startupRecoveryAttempts >= maxStartupRecoveryAttempts) {
+                                    clearInterval(startupGuard);
+                                    console.error('[PLAYER] startup recovery exhausted');
+                                    return;
+                                }
+
+                                startupRecoveryAttempts++;
+                                console.warn('[PLAYER] startup not ready, retry #' + startupRecoveryAttempts);
+                                video.src = withRetryQuery(url);
+                                video.load();
+                            }, 2200);
                         }
                         updateActiveQualityUI(url);
                     }

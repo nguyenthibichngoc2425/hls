@@ -1,3 +1,7 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/C:/Users/ADMIN/.m2/wrapper/dists/apache-maven-3.9.11/a2d47e15/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -8,21 +12,21 @@
 
  :: Spring Boot ::                (v4.0.0)
 
-2026-04-18T16:09:41.439+07:00  INFO 39324 --- [hls-server] [           main] com.rin.hlsserver.HlsServerApplication   : Starting HlsServerApplication using Java 21 with PID 39324 (/home/nrin31266/IdeaProjects/hls/hls-server/target/classes started by nrin31266 in /home/nrin31266/IdeaProjects/hls/hls-server)
-2026-04-18T16:09:41.441+07:00  INFO 39324 --- [hls-server] [           main] com.rin.hlsserver.HlsServerApplication   : The following 1 profile is active: "server-a"
-2026-04-18T16:09:41.784+07:00  INFO 39324 --- [hls-server] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-04-18T16:09:41.818+07:00  INFO 39324 --- [hls-server] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 9 JPA repository interfaces.
-2026-04-18T16:09:42.093+07:00  INFO 39324 --- [hls-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
-2026-04-18T16:09:42.100+07:00  INFO 39324 --- [hls-server] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-18T16:09:42.100+07:00  INFO 39324 --- [hls-server] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-04-18T16:09:42.121+07:00  INFO 39324 --- [hls-server] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 657 ms
-2026-04-18T16:09:42.182+07:00  INFO 39324 --- [hls-server] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-04-18T16:09:42.203+07:00  INFO 39324 --- [hls-server] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-04-18T16:09:42.388+07:00  INFO 39324 --- [hls-server] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-04-18T16:09:42.404+07:00  INFO 39324 --- [hls-server] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-04-18T16:09:42.448+07:00  INFO 39324 --- [hls-server] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@a1cb94
-2026-04-18T16:09:42.449+07:00  INFO 39324 --- [hls-server] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-04-18T16:09:42.481+07:00  INFO 39324 --- [hls-server] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-04-20T23:45:27.513+07:00  INFO 21580 --- [hls-server] [           main] com.rin.hlsserver.HlsServerApplication   : Starting HlsServerApplication using Java 25.0.2 with PID 21580 (D:\IdeaProjects\HTTP-Live-Streaming\hls-server\target\classes started by ADMIN in D:\IdeaProjects\HTTP-Live-Streaming\hls-server)
+2026-04-20T23:45:27.515+07:00  INFO 21580 --- [hls-server] [           main] com.rin.hlsserver.HlsServerApplication   : The following 1 profile is active: "server-a"
+2026-04-20T23:45:28.122+07:00  INFO 21580 --- [hls-server] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-20T23:45:28.197+07:00  INFO 21580 --- [hls-server] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 9 JPA repository interfaces.
+2026-04-20T23:45:28.676+07:00  INFO 21580 --- [hls-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-20T23:45:28.687+07:00  INFO 21580 --- [hls-server] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-20T23:45:28.687+07:00  INFO 21580 --- [hls-server] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
+2026-04-20T23:45:28.735+07:00  INFO 21580 --- [hls-server] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1181 ms
+2026-04-20T23:45:28.830+07:00  INFO 21580 --- [hls-server] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-20T23:45:28.878+07:00  INFO 21580 --- [hls-server] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
+2026-04-20T23:45:29.275+07:00  INFO 21580 --- [hls-server] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-20T23:45:29.312+07:00  INFO 21580 --- [hls-server] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-20T23:45:29.393+07:00  INFO 21580 --- [hls-server] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@571db8b4
+2026-04-20T23:45:29.394+07:00  INFO 21580 --- [hls-server] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-20T23:45:29.454+07:00  INFO 21580 --- [hls-server] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:postgresql://localhost:5432/hlsdb]
 	Database driver: PostgreSQL JDBC Driver
 	Database dialect: PostgreSQLDialect
@@ -34,136 +38,857 @@
 	Pool: DatasourceConnectionProviderImpl
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-04-18T16:09:43.089+07:00  INFO 39324 --- [hls-server] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-04-18T16:09:43.167+07:00  INFO 39324 --- [hls-server] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-04-18T16:09:43.204+07:00  INFO 39324 --- [hls-server] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-✅ JVM Default Timezone Set: Asia/Ho_Chi_Minh
-2026-04-18T16:09:43.718+07:00  INFO 39324 --- [hls-server] [           main] c.r.h.config.ApplicationInitConfig       : Initializing application.....
-2026-04-18T16:09:43.732+07:00  WARN 39324 --- [hls-server] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-04-18T16:09:44.046+07:00  INFO 39324 --- [hls-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
-2026-04-18T16:09:44.051+07:00  INFO 39324 --- [hls-server] [           main] com.rin.hlsserver.HlsServerApplication   : Started HlsServerApplication in 2.825 seconds (process running for 2.99)
-2026-04-18T16:09:44.072+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-04-18T16:09:44.072+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-04-18T16:09:44.073+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-04-18T16:09:44.075+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-1] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/movies user=anonymous ip=127.0.0.1
-Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:45:30.526+07:00  INFO 21580 --- [hls-server] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-20T23:45:30.671+07:00  INFO 21580 --- [hls-server] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-20T23:45:30.726+07:00  INFO 21580 --- [hls-server] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+? JVM Default Timezone Set: Asia/Ho_Chi_Minh
+2026-04-20T23:45:31.467+07:00  INFO 21580 --- [hls-server] [           main] c.r.h.config.ApplicationInitConfig       : Initializing application.....
+2026-04-20T23:45:31.491+07:00  WARN 21580 --- [hls-server] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-20T23:45:32.018+07:00  INFO 21580 --- [hls-server] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-04-20T23:45:32.025+07:00  INFO 21580 --- [hls-server] [           main] com.rin.hlsserver.HlsServerApplication   : Started HlsServerApplication in 4.862 seconds (process running for 5.21)
 Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password_hash,u1_0.status,u1_0.updated_at from users u1_0 where u1_0.email=?
 Hibernate: select g1_0.id from genres g1_0 where g1_0.genre_id=? fetch first ? rows only
-2026-04-18T16:09:44.124+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-1] c.r.h.controller.MovieController         : GET /api/movies - Get all movies
 Hibernate: select g1_0.id from genres g1_0 where g1_0.genre_id=? fetch first ? rows only
-Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
 Hibernate: select g1_0.id from genres g1_0 where g1_0.genre_id=? fetch first ? rows only
-2026-04-18T16:09:44.126+07:00  INFO 39324 --- [hls-server] [           main] c.r.h.config.ApplicationInitConfig       : Default genres checked/created successfully
-2026-04-18T16:09:44.127+07:00  INFO 39324 --- [hls-server] [           main] c.r.h.monitor.gui.SwingMonitorLauncher   : Attempting to launch HLS Monitor GUI...
-Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0
-2026-04-18T16:09:44.402+07:00  INFO 39324 --- [hls-server] [WT-EventQueue-0] c.r.h.monitor.gui.SwingMonitorLauncher   : HLS Monitor GUI launched successfully
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-2026-04-18T16:09:47.214+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-2] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/movies user=anonymous ip=127.0.0.1
+2026-04-20T23:45:32.147+07:00  INFO 21580 --- [hls-server] [           main] c.r.h.config.ApplicationInitConfig       : Default genres checked/created successfully
+2026-04-20T23:45:32.147+07:00  INFO 21580 --- [hls-server] [           main] c.r.h.monitor.gui.SwingMonitorLauncher   : Attempting to launch HLS Monitor GUI...
+2026-04-20T23:45:32.210+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-20T23:45:32.211+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-20T23:45:32.212+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-20T23:45:32.215+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-1] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/movies user=anonymous ip=127.0.0.1
 Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
-2026-04-18T16:09:47.220+07:00  INFO 39324 --- [hls-server] [nio-8081-exec-2] c.r.h.controller.MovieController         : GET /api/movies - Get all movies
+2026-04-20T23:45:32.278+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-1] c.r.h.controller.MovieController         : GET /api/movies - Get all movies
 Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
 Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
-Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select g1_0.id,g1_0.created_at,g1_0.description,g1_0.genre_id,g1_0.name,g1_0.updated_at from genres g1_0 where g1_0.id=?
+Hibernate: select vq1_0.movie_id,vq1_0.id,vq1_0.bitrate,vq1_0.created_at,vq1_0.file_size,vq1_0.playlist_path,vq1_0.quality,vq1_0.resolution,vq1_0.segments_path from video_qualities vq1_0 where vq1_0.movie_id=?
+Hibernate: select vq1_0.movie_id,vq1_0.id,vq1_0.bitrate,vq1_0.created_at,vq1_0.file_size,vq1_0.playlist_path,vq1_0.quality,vq1_0.resolution,vq1_0.segments_path from video_qualities vq1_0 where vq1_0.movie_id=?
+Hibernate: select g1_0.id,g1_0.created_at,g1_0.description,g1_0.genre_id,g1_0.name,g1_0.updated_at from genres g1_0 where g1_0.id=?
+Hibernate: select vq1_0.movie_id,vq1_0.id,vq1_0.bitrate,vq1_0.created_at,vq1_0.file_size,vq1_0.playlist_path,vq1_0.quality,vq1_0.resolution,vq1_0.segments_path from video_qualities vq1_0 where vq1_0.movie_id=?
+Hibernate: select g1_0.id,g1_0.created_at,g1_0.description,g1_0.genre_id,g1_0.name,g1_0.updated_at from genres g1_0 where g1_0.id=?
+Hibernate: select vq1_0.movie_id,vq1_0.id,vq1_0.bitrate,vq1_0.created_at,vq1_0.file_size,vq1_0.playlist_path,vq1_0.quality,vq1_0.resolution,vq1_0.segments_path from video_qualities vq1_0 where vq1_0.movie_id=?
+Hibernate: select g1_0.id,g1_0.created_at,g1_0.description,g1_0.genre_id,g1_0.name,g1_0.updated_at from genres g1_0 where g1_0.id=?
+Hibernate: select vq1_0.movie_id,vq1_0.id,vq1_0.bitrate,vq1_0.created_at,vq1_0.file_size,vq1_0.playlist_path,vq1_0.quality,vq1_0.resolution,vq1_0.segments_path from video_qualities vq1_0 where vq1_0.movie_id=?
+Hibernate: select g1_0.id,g1_0.created_at,g1_0.description,g1_0.genre_id,g1_0.name,g1_0.updated_at from genres g1_0 where g1_0.id=?
+Hibernate: select vq1_0.movie_id,vq1_0.id,vq1_0.bitrate,vq1_0.created_at,vq1_0.file_size,vq1_0.playlist_path,vq1_0.quality,vq1_0.resolution,vq1_0.segments_path from video_qualities vq1_0 where vq1_0.movie_id=?
+2026-04-20T23:45:32.640+07:00  INFO 21580 --- [hls-server] [WT-EventQueue-0] c.r.h.monitor.gui.SwingMonitorLauncher   : HLS Monitor GUI launched successfully
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:45:38.860+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-3] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/genres user=anonymous ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+Hibernate: select g1_0.id,g1_0.created_at,g1_0.description,g1_0.genre_id,g1_0.name,g1_0.updated_at from genres g1_0
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:45:40.540+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-5] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/favorites/check user=anonymous ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password_hash,u1_0.status,u1_0.updated_at from users u1_0 where u1_0.id=?
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: select fm1_0.id from favorite_movies fm1_0 where fm1_0.user_id=? and fm1_0.movie_id=? fetch first ? rows only
+2026-04-20T23:45:41.676+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-4] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] HEAD /api/hls/5/360p/playlist.m3u8 user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:45:41.689+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-4] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request playlist movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:45:41.705+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-4] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả playlist movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:45:41.759+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-6] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/segment_000.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:45:41.767+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-6] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_000.ts movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:45:41.774+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-6] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_000.ts movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:45:41.775+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-6] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_000.ts movieId=5 quality=360p
+2026-04-20T23:45:41.876+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-7] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/segment_002.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:45:41.881+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-7] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_002.ts movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:45:41.888+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-7] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_002.ts movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:45:41.889+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-7] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_002.ts movieId=5 quality=360p
+Unhandled exception: ServletOutputStream failed to write: java.io.IOException: An established connection was aborted by the software in your host machine
+2026-04-20T23:45:41.898+07:00  WARN 21580 --- [hls-server] [nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Failure in @ExceptionHandler com.rin.hlsserver.exception.BaseExceptionHandler#handleException(Exception)
+
+org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class com.rin.hlsserver.dto.response.ApiResponse] with preset Content-Type 'video/mp2t'
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:364) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:261) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.14.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.14.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at com.rin.hlsserver.config.RandomFailureSimulationFilter.doFilterInternal(RandomFailureSimulationFilter.java:43) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at com.rin.hlsserver.config.RequestLoggingFilter.doFilterInternal(RequestLoggingFilter.java:46) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+
+2026-04-20T23:45:41.959+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-2] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/segment_001.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:45:41.968+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-2] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_001.ts movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:45:41.978+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-2] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_001.ts movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:45:41.978+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-2] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_001.ts movieId=5 quality=360p
+2026-04-20T23:45:42.031+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-8] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/segment_003.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:45:42.039+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-8] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_003.ts movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:45:42.048+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-8] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_003.ts movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:45:42.048+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-8] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_003.ts movieId=5 quality=360p
+2026-04-20T23:45:42.114+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-9] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/segment_005.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:45:42.121+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-9] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_005.ts movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:45:42.128+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-9] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_005.ts movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:45:42.129+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-9] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_005.ts movieId=5 quality=360p
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:45:47.181+07:00  INFO 21580 --- [hls-server] [io-8081-exec-10] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/segment_007.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:45:47.193+07:00  INFO 21580 --- [hls-server] [io-8081-exec-10] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_007.ts movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:45:47.203+07:00  INFO 21580 --- [hls-server] [io-8081-exec-10] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_007.ts movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:45:47.203+07:00  INFO 21580 --- [hls-server] [io-8081-exec-10] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_007.ts movieId=5 quality=360p
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:45:57.497+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-1] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/segment_009.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:45:57.506+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-1] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_009.ts movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:45:57.517+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-1] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_009.ts movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:45:57.517+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-1] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_009.ts movieId=5 quality=360p
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:46:09.079+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-3] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/segment_011.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:46:09.087+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-3] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_011.ts movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:46:09.095+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-3] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_011.ts movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:46:09.095+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-3] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_011.ts movieId=5 quality=360p
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:46:13.711+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-5] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/segment_000.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:46:13.718+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-5] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_000.ts movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:46:13.725+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-5] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_000.ts movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:46:13.726+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-5] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_000.ts movieId=5 quality=360p
+Unhandled exception: ServletOutputStream failed to write: java.io.IOException: An established connection was aborted by the software in your host machine
+2026-04-20T23:46:13.743+07:00  WARN 21580 --- [hls-server] [nio-8081-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Failure in @ExceptionHandler com.rin.hlsserver.exception.BaseExceptionHandler#handleException(Exception)
+
+org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class com.rin.hlsserver.dto.response.ApiResponse] with preset Content-Type 'video/mp2t'
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:364) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:261) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.14.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.14.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at com.rin.hlsserver.config.RandomFailureSimulationFilter.doFilterInternal(RandomFailureSimulationFilter.java:43) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at com.rin.hlsserver.config.RequestLoggingFilter.doFilterInternal(RequestLoggingFilter.java:46) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+
+2026-04-20T23:46:13.779+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-4] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/720p/playlist.m3u8 user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:46:13.784+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-4] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request playlist movieId=5 quality=720p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:46:13.790+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-4] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả playlist movieId=5 quality=720p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:46:13.860+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-6] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/720p/segment_000.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:46:13.867+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-6] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_000.ts movieId=5 quality=720p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:46:13.874+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-6] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_000.ts movieId=5 quality=720p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:46:13.875+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-6] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_000.ts movieId=5 quality=720p
+2026-04-20T23:46:14.016+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-7] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/720p/segment_006.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:46:14.022+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-7] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_006.ts movieId=5 quality=720p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:46:14.033+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-7] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_006.ts movieId=5 quality=720p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:46:14.034+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-7] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_006.ts movieId=5 quality=720p
+2026-04-20T23:46:14.191+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-2] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/720p/segment_008.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:46:14.198+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-2] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_008.ts movieId=5 quality=720p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:46:14.207+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-2] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_008.ts movieId=5 quality=720p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:46:14.208+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-2] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_008.ts movieId=5 quality=720p
+2026-04-20T23:46:14.385+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-8] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/720p/segment_010.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:46:14.391+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-8] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_010.ts movieId=5 quality=720p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:46:14.398+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-8] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_010.ts movieId=5 quality=720p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:46:14.398+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-8] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_010.ts movieId=5 quality=720p
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:46:15.925+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-9] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/720p/segment_012.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:46:15.936+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-9] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_012.ts movieId=5 quality=720p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:46:15.943+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-9] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_012.ts movieId=5 quality=720p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:46:15.944+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-9] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_012.ts movieId=5 quality=720p
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 where sl1_0.event_type in (?) order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 where sl1_0.event_type in (?) order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 where sl1_0.event_type in (?) order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 where sl1_0.event_type in (?,?,?) order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:46:42.811+07:00  INFO 21580 --- [hls-server] [io-8081-exec-10] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/720p/segment_014.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:46:42.818+07:00  INFO 21580 --- [hls-server] [io-8081-exec-10] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_014.ts movieId=5 quality=720p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:46:42.825+07:00  INFO 21580 --- [hls-server] [io-8081-exec-10] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_014.ts movieId=5 quality=720p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:46:42.825+07:00  INFO 21580 --- [hls-server] [io-8081-exec-10] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_014.ts movieId=5 quality=720p
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:46:51.565+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-1] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/720p/segment_016.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:46:51.573+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-1] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_016.ts movieId=5 quality=720p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:46:51.583+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-1] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_016.ts movieId=5 quality=720p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:46:51.583+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-1] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_016.ts movieId=5 quality=720p
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:47:05.990+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-3] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/720p/segment_018.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:47:05.999+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-3] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_018.ts movieId=5 quality=720p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:47:06.007+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-3] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_018.ts movieId=5 quality=720p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:47:06.008+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-3] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_018.ts movieId=5 quality=720p
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:47:23.088+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-5] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/720p/segment_020.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:47:23.097+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-5] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_020.ts movieId=5 quality=720p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:47:23.105+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-5] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_020.ts movieId=5 quality=720p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:47:23.105+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-5] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_020.ts movieId=5 quality=720p
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:47:33.753+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-4] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/720p/segment_022.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:47:33.764+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-4] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_022.ts movieId=5 quality=720p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:47:33.771+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-4] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_022.ts movieId=5 quality=720p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:47:33.771+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-4] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_022.ts movieId=5 quality=720p
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:47:55.362+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-6] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/720p/segment_024.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:47:55.369+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-6] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_024.ts movieId=5 quality=720p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:47:55.376+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-6] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_024.ts movieId=5 quality=720p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:47:55.376+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-6] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_024.ts movieId=5 quality=720p
+Hibernate: delete from system_logs sl1_0
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:48:00.282+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-7] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/720p/segment_000.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:00.297+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-7] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_000.ts movieId=5 quality=720p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:00.304+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-7] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_000.ts movieId=5 quality=720p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:48:00.305+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-7] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_000.ts movieId=5 quality=720p
+Unhandled exception: ServletOutputStream failed to write: java.io.IOException: An established connection was aborted by the software in your host machine
+2026-04-20T23:48:00.312+07:00  WARN 21580 --- [hls-server] [nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Failure in @ExceptionHandler com.rin.hlsserver.exception.BaseExceptionHandler#handleException(Exception)
+
+org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class com.rin.hlsserver.dto.response.ApiResponse] with preset Content-Type 'video/mp2t'
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:364) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:261) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.14.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.14.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at com.rin.hlsserver.config.RandomFailureSimulationFilter.doFilterInternal(RandomFailureSimulationFilter.java:43) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at com.rin.hlsserver.config.RequestLoggingFilter.doFilterInternal(RequestLoggingFilter.java:46) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+
+2026-04-20T23:48:00.313+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-2] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/720p/segment_000.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:00.318+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-2] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_000.ts movieId=5 quality=720p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:00.324+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-2] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_000.ts movieId=5 quality=720p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:48:00.325+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-2] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_000.ts movieId=5 quality=720p
+Unhandled exception: ServletOutputStream failed to write: java.io.IOException: An established connection was aborted by the software in your host machine
+2026-04-20T23:48:00.343+07:00  WARN 21580 --- [hls-server] [nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Failure in @ExceptionHandler com.rin.hlsserver.exception.BaseExceptionHandler#handleException(Exception)
+
+org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class com.rin.hlsserver.dto.response.ApiResponse] with preset Content-Type 'video/mp2t'
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:364) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:261) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.14.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.1.jar:7.0.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.14.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.0.jar:7.0.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at com.rin.hlsserver.config.RandomFailureSimulationFilter.doFilterInternal(RandomFailureSimulationFilter.java:43) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at com.rin.hlsserver.config.RequestLoggingFilter.doFilterInternal(RequestLoggingFilter.java:46) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.1.jar:7.0.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1778) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.14.jar:11.0.14]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:48:02.267+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-9] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/movies user=anonymous ip=172.18.0.1
+2026-04-20T23:48:02.267+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-8] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/genres user=anonymous ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:02.279+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-9] c.r.h.controller.MovieController         : GET /api/movies - Get all movies
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+Hibernate: select g1_0.id,g1_0.created_at,g1_0.description,g1_0.genre_id,g1_0.name,g1_0.updated_at from genres g1_0
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0
+Hibernate: select g1_0.id,g1_0.created_at,g1_0.description,g1_0.genre_id,g1_0.name,g1_0.updated_at from genres g1_0 where g1_0.id=?
+Hibernate: select vq1_0.movie_id,vq1_0.id,vq1_0.bitrate,vq1_0.created_at,vq1_0.file_size,vq1_0.playlist_path,vq1_0.quality,vq1_0.resolution,vq1_0.segments_path from video_qualities vq1_0 where vq1_0.movie_id=?
+Hibernate: select vq1_0.movie_id,vq1_0.id,vq1_0.bitrate,vq1_0.created_at,vq1_0.file_size,vq1_0.playlist_path,vq1_0.quality,vq1_0.resolution,vq1_0.segments_path from video_qualities vq1_0 where vq1_0.movie_id=?
+Hibernate: select g1_0.id,g1_0.created_at,g1_0.description,g1_0.genre_id,g1_0.name,g1_0.updated_at from genres g1_0 where g1_0.id=?
+Hibernate: select vq1_0.movie_id,vq1_0.id,vq1_0.bitrate,vq1_0.created_at,vq1_0.file_size,vq1_0.playlist_path,vq1_0.quality,vq1_0.resolution,vq1_0.segments_path from video_qualities vq1_0 where vq1_0.movie_id=?
+Hibernate: select g1_0.id,g1_0.created_at,g1_0.description,g1_0.genre_id,g1_0.name,g1_0.updated_at from genres g1_0 where g1_0.id=?
+Hibernate: select vq1_0.movie_id,vq1_0.id,vq1_0.bitrate,vq1_0.created_at,vq1_0.file_size,vq1_0.playlist_path,vq1_0.quality,vq1_0.resolution,vq1_0.segments_path from video_qualities vq1_0 where vq1_0.movie_id=?
+Hibernate: select g1_0.id,g1_0.created_at,g1_0.description,g1_0.genre_id,g1_0.name,g1_0.updated_at from genres g1_0 where g1_0.id=?
+Hibernate: select vq1_0.movie_id,vq1_0.id,vq1_0.bitrate,vq1_0.created_at,vq1_0.file_size,vq1_0.playlist_path,vq1_0.quality,vq1_0.resolution,vq1_0.segments_path from video_qualities vq1_0 where vq1_0.movie_id=?
+Hibernate: select g1_0.id,g1_0.created_at,g1_0.description,g1_0.genre_id,g1_0.name,g1_0.updated_at from genres g1_0 where g1_0.id=?
+Hibernate: select vq1_0.movie_id,vq1_0.id,vq1_0.bitrate,vq1_0.created_at,vq1_0.file_size,vq1_0.playlist_path,vq1_0.quality,vq1_0.resolution,vq1_0.segments_path from video_qualities vq1_0 where vq1_0.movie_id=?
+2026-04-20T23:48:02.340+07:00  INFO 21580 --- [hls-server] [io-8081-exec-10] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/movies user=anonymous ip=172.18.0.1
+2026-04-20T23:48:02.341+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-1] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/genres user=anonymous ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:02.354+07:00  INFO 21580 --- [hls-server] [io-8081-exec-10] c.r.h.controller.MovieController         : GET /api/movies - Get all movies
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+Hibernate: select g1_0.id,g1_0.created_at,g1_0.description,g1_0.genre_id,g1_0.name,g1_0.updated_at from genres g1_0
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0
+Hibernate: select g1_0.id,g1_0.created_at,g1_0.description,g1_0.genre_id,g1_0.name,g1_0.updated_at from genres g1_0 where g1_0.id=?
+Hibernate: select vq1_0.movie_id,vq1_0.id,vq1_0.bitrate,vq1_0.created_at,vq1_0.file_size,vq1_0.playlist_path,vq1_0.quality,vq1_0.resolution,vq1_0.segments_path from video_qualities vq1_0 where vq1_0.movie_id=?
+Hibernate: select vq1_0.movie_id,vq1_0.id,vq1_0.bitrate,vq1_0.created_at,vq1_0.file_size,vq1_0.playlist_path,vq1_0.quality,vq1_0.resolution,vq1_0.segments_path from video_qualities vq1_0 where vq1_0.movie_id=?
+Hibernate: select g1_0.id,g1_0.created_at,g1_0.description,g1_0.genre_id,g1_0.name,g1_0.updated_at from genres g1_0 where g1_0.id=?
+Hibernate: select vq1_0.movie_id,vq1_0.id,vq1_0.bitrate,vq1_0.created_at,vq1_0.file_size,vq1_0.playlist_path,vq1_0.quality,vq1_0.resolution,vq1_0.segments_path from video_qualities vq1_0 where vq1_0.movie_id=?
+Hibernate: select g1_0.id,g1_0.created_at,g1_0.description,g1_0.genre_id,g1_0.name,g1_0.updated_at from genres g1_0 where g1_0.id=?
+Hibernate: select vq1_0.movie_id,vq1_0.id,vq1_0.bitrate,vq1_0.created_at,vq1_0.file_size,vq1_0.playlist_path,vq1_0.quality,vq1_0.resolution,vq1_0.segments_path from video_qualities vq1_0 where vq1_0.movie_id=?
+Hibernate: select g1_0.id,g1_0.created_at,g1_0.description,g1_0.genre_id,g1_0.name,g1_0.updated_at from genres g1_0 where g1_0.id=?
+Hibernate: select vq1_0.movie_id,vq1_0.id,vq1_0.bitrate,vq1_0.created_at,vq1_0.file_size,vq1_0.playlist_path,vq1_0.quality,vq1_0.resolution,vq1_0.segments_path from video_qualities vq1_0 where vq1_0.movie_id=?
+Hibernate: select g1_0.id,g1_0.created_at,g1_0.description,g1_0.genre_id,g1_0.name,g1_0.updated_at from genres g1_0 where g1_0.id=?
+Hibernate: select vq1_0.movie_id,vq1_0.id,vq1_0.bitrate,vq1_0.created_at,vq1_0.file_size,vq1_0.playlist_path,vq1_0.quality,vq1_0.resolution,vq1_0.segments_path from video_qualities vq1_0 where vq1_0.movie_id=?
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:48:03.250+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-3] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/favorites/check user=anonymous ip=172.18.0.1
+2026-04-20T23:48:03.251+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-5] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] POST /api/watch-history user=anonymous ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password_hash,u1_0.status,u1_0.updated_at from users u1_0 where u1_0.id=?
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password_hash,u1_0.status,u1_0.updated_at from users u1_0 where u1_0.id=?
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: select fm1_0.id from favorite_movies fm1_0 where fm1_0.user_id=? and fm1_0.movie_id=? fetch first ? rows only
+Hibernate: select wh1_0.id,wh1_0.created_at,wh1_0.movie_id,wh1_0.updated_at,wh1_0.user_id from watch_history wh1_0 where wh1_0.user_id=? and wh1_0.movie_id=?
+2026-04-20T23:48:03.269+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-5] c.r.h.service.WatchHistoryService        : Updated watch history for user 3 and movie 5
+Hibernate: select g1_0.id,g1_0.created_at,g1_0.description,g1_0.genre_id,g1_0.name,g1_0.updated_at from genres g1_0 where g1_0.id=?
+Hibernate: select vq1_0.movie_id,vq1_0.id,vq1_0.bitrate,vq1_0.created_at,vq1_0.file_size,vq1_0.playlist_path,vq1_0.quality,vq1_0.resolution,vq1_0.segments_path from video_qualities vq1_0 where vq1_0.movie_id=?
+Hibernate: update watch_history set movie_id=?,updated_at=?,user_id=? where id=?
+2026-04-20T23:48:04.152+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-4] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] HEAD /api/hls/5/360p/playlist.m3u8 user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:04.159+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-4] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request playlist movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:04.168+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-4] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả playlist movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:48:04.174+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-6] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/playlist.m3u8 user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:04.180+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-6] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request playlist movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:04.186+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-6] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả playlist movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:48:04.199+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-7] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/segment_000.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:04.205+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-7] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_000.ts movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:04.212+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-7] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_000.ts movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:48:04.212+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-7] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_000.ts movieId=5 quality=360p
+2026-04-20T23:48:04.256+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-2] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/segment_000.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:04.261+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-2] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_000.ts movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:04.267+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-2] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_000.ts movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:48:04.268+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-2] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_000.ts movieId=5 quality=360p
+2026-04-20T23:48:04.365+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-8] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/segment_001.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:04.371+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-8] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_001.ts movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:04.377+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-8] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_001.ts movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:48:04.377+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-8] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_001.ts movieId=5 quality=360p
+2026-04-20T23:48:04.389+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-9] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/segment_002.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:04.397+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-9] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_002.ts movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:04.405+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-9] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_002.ts movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:48:04.405+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-9] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_002.ts movieId=5 quality=360p
+2026-04-20T23:48:04.431+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-1] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/segment_003.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:04.437+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-1] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_003.ts movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:04.445+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-1] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_003.ts movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:48:04.446+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-1] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_003.ts movieId=5 quality=360p
+2026-04-20T23:48:04.468+07:00  INFO 21580 --- [hls-server] [io-8081-exec-10] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/segment_004.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:04.474+07:00  INFO 21580 --- [hls-server] [io-8081-exec-10] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_004.ts movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:04.481+07:00  INFO 21580 --- [hls-server] [io-8081-exec-10] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_004.ts movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:48:04.481+07:00  INFO 21580 --- [hls-server] [io-8081-exec-10] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_004.ts movieId=5 quality=360p
+2026-04-20T23:48:04.497+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-3] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/segment_005.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:04.504+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-3] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_005.ts movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:04.511+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-3] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_005.ts movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:48:04.511+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-3] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_005.ts movieId=5 quality=360p
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:48:07.518+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-5] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/segment_006.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:07.526+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-5] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_006.ts movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:07.534+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-5] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_006.ts movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:48:07.534+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-5] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_006.ts movieId=5 quality=360p
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:48:12.721+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-4] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/segment_007.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:12.727+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-4] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_007.ts movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:12.733+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-4] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_007.ts movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:48:12.733+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-4] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_007.ts movieId=5 quality=360p
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:48:17.906+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-6] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/segment_008.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:17.914+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-6] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_008.ts movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:17.920+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-6] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_008.ts movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:48:17.921+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-6] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_008.ts movieId=5 quality=360p
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:48:23.636+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-7] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] GET /api/hls/5/360p/segment_009.ts user=cun@gmail.com ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:23.649+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-7] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Request segment segment_009.ts movieId=5 quality=360p
+Hibernate: select m1_0.id,m1_0.created_at,m1_0.description,m1_0.duration,m1_0.genre_id,m1_0.image_url,m1_0.master_playlist_path,m1_0.processing_error,m1_0.processing_minutes,m1_0.processing_progress,m1_0.release_year,m1_0.source_video_path,m1_0.status,m1_0.title,m1_0.updated_at from movies m1_0 where m1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:23.659+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-7] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][HLS] Trả segment segment_009.ts movieId=5 quality=360p account=cun@gmail.com ip=172.18.0.1
+2026-04-20T23:48:23.660+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-7] c.r.h.controller.HlsStreamingController  : [SERVER-A][HLS] Trả segment segment_009.ts movieId=5 quality=360p
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+2026-04-20T23:48:29.069+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-2] c.r.h.config.RequestLoggingFilter        : [SERVER-A][API_REQUEST] POST /api/auth/logout user=anonymous ip=172.18.0.1
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+Hibernate: select u1_0.id,u1_0.created_at,u1_0.email,u1_0.full_name,u1_0.password_hash,u1_0.status,u1_0.updated_at from users u1_0 where u1_0.id=?
+Hibernate: insert into system_logs (created_at,endpoint,event_type,ip_address,level,message,port,server_name,user_email) values (?,?,?,?,?,?,?,?,?)
+2026-04-20T23:48:29.124+07:00  INFO 21580 --- [hls-server] [nio-8081-exec-2] c.r.h.m.service.MonitorTrackerService    : [SERVER-A][AUTH] Đăng xuất user=cun@gmail.com ip=172.18.0.1
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+Hibernate: select sl1_0.id,sl1_0.created_at,sl1_0.endpoint,sl1_0.event_type,sl1_0.ip_address,sl1_0.level,sl1_0.message,sl1_0.port,sl1_0.server_name,sl1_0.user_email from system_logs sl1_0 order by sl1_0.created_at desc fetch first ? rows only
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:4.0.0:run (default-cli) on project hls-server: Process terminated with exit code: 143 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

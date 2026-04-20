@@ -5,4 +5,4 @@ app:
   server-name: SERVER-B
   server-id: B
   simulation:
-    failureRate: ${APP_SIMULATION_FAILURERATE:0.0}
+    failureRate: ${APP_SIMULATION_FAILURE_RATE:0.0}

@@ -41,6 +41,11 @@ public class ModelUser {
         this.role = role;
     }
 
+    public ModelUser( String userName, String mail, Role role) {
+        this.userName = userName;
+        this.mail = mail;
+        this.role = role;
+    }
     private Long userId;
     private String userName;
     private String mail;

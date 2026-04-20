@@ -11,8 +11,9 @@ DB_PORT="${DB_PORT:-5432}"
 DB_NAME="${DB_NAME:-hlsdb}"
 DB_USER="${DB_USER:-root}"
 DB_PASSWORD="${DB_PASSWORD:-root}"
+JVM_TIMEZONE="${JVM_TIMEZONE:-Asia/Ho_Chi_Minh}"
 
-HLS_STORAGE_PATH="${HLS_STORAGE_PATH:-/tmp/hls-data/videos/hls}"
+HLS_STORAGE_PATH="${HLS_STORAGE_PATH:-C:\hls\data}"
 APP_SIMULATION_FAILURE_RATE="${APP_SIMULATION_FAILURE_RATE:-0.2}"
 
 mkdir -p "$PID_DIR" "$LOG_DIR" "$HLS_STORAGE_PATH"
@@ -36,7 +37,9 @@ start_backend() {
         SPRING_DATASOURCE_PASSWORD="$DB_PASSWORD" \
         APP_HLS_STORAGE_PATH="$HLS_STORAGE_PATH" \
         APP_SIMULATION_FAILURE_RATE="$APP_SIMULATION_FAILURE_RATE" \
-        bash ./mvnw -q spring-boot:run -Dspring-boot.run.profiles="$profile" >"$log_file" 2>&1 &
+                bash ./mvnw -q spring-boot:run \
+                    -Dspring-boot.run.profiles="$profile" \
+                    -Dspring-boot.run.jvmArguments="-Duser.timezone=${JVM_TIMEZONE}" >"$log_file" 2>&1 &
         echo $! >"$pid_file"
     )
 
@@ -76,5 +79,6 @@ echo "[DEMO] Load balancer URL: http://localhost:8080"
 echo "[DEMO] Backend A URL: http://localhost:8081"
 echo "[DEMO] Backend B URL: http://localhost:8082"
 echo "[DEMO] Failure simulation rate: ${APP_SIMULATION_FAILURE_RATE}"
+echo "[DEMO] JVM timezone: ${JVM_TIMEZONE}"
 echo "[DEMO] Shared HLS storage path: ${HLS_STORAGE_PATH}"
 echo "[DEMO] To stop everything: bash stop-multi-server-demo.sh"
