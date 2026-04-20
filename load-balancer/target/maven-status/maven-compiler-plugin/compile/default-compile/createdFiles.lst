@@ -1,6 +1,0 @@
-com\rin\loadbalancer\LoadBalancerApplication.class
-com\rin\loadbalancer\model\BackendServer.class
-com\rin\loadbalancer\service\HttpProxyService.class
-com\rin\loadbalancer\controller\ProxyController.class
-com\rin\loadbalancer\service\HealthCheckService.class
-com\rin\loadbalancer\strategy\LoadBalancerStrategy.class
