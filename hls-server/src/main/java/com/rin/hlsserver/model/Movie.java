@@ -77,6 +77,14 @@ public class Movie {
     @Builder.Default
     private List<WatchHistory> watchHistories = new ArrayList<>();
 
+    @OneToMany(
+            mappedBy = "movie",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    @Builder.Default
+    private List<MovieReview> reviews = new ArrayList<>();
+
     public enum MovieStatus {
         DRAFT,      // Chưa xử lý
         PROCESSING, // Đang xử lý

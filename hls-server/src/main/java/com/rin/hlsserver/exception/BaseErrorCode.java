@@ -40,7 +40,11 @@ public enum BaseErrorCode implements ErrorCode {
 
     // 🔹 Favorite errors
     FAVORITE_ALREADY_EXISTS(9500, "Movie is already in favorites", HttpStatus.CONFLICT),
-    FAVORITE_NOT_FOUND(9501, "Favorite not found", HttpStatus.NOT_FOUND)
+    FAVORITE_NOT_FOUND(9501, "Favorite not found", HttpStatus.NOT_FOUND),
+
+    // 🔹 Movie review errors
+    INVALID_RATING(9600, "Rating must be between 1 and 5", HttpStatus.BAD_REQUEST),
+    REVIEW_NOT_FOUND(9601, "Review not found", HttpStatus.NOT_FOUND)
     ;
 
 

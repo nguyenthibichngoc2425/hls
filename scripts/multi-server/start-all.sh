@@ -8,4 +8,4 @@ bash "$SCRIPT_DIR/start-infra.sh"
 bash "$SCRIPT_DIR/start-server-a.sh"
 bash "$SCRIPT_DIR/start-server-b.sh"
 
-echo "[DEMO] All components are running."
+echo "[DEMO] Multi-server mode is running (infra + server-a + server-b)."

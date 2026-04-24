@@ -11,6 +11,7 @@ import com.rin.hlsserver.model.VideoProcessingTask;
 import com.rin.hlsserver.model.VideoQuality;
 import com.rin.hlsserver.repository.GenreRepository;
 import com.rin.hlsserver.repository.MovieRepository;
+import com.rin.hlsserver.repository.MovieReviewRepository;
 import com.rin.hlsserver.repository.VideoProcessingTaskRepository;
 import com.rin.hlsserver.repository.VideoQualityRepository;
 import lombok.RequiredArgsConstructor;
@@ -24,6 +25,7 @@ import org.springframework.transaction.support.TransactionSynchronizationManager
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -34,6 +36,7 @@ public class MovieService {
     private final MovieRepository movieRepository;
     private final GenreRepository genreRepository;
     private final VideoQualityRepository videoQualityRepository;
+    private final MovieReviewRepository movieReviewRepository;
     private final VideoProcessingTaskRepository taskRepository;
     private final FFmpegService ffmpegService;
     private final ApplicationContext applicationContext;
@@ -49,7 +52,7 @@ public class MovieService {
         systemLogService.save("API_REQUEST", "/api/movies", "anonymous", "unknown",
                 "Lay danh sach movie");
         return movieRepository.findAll().stream()
-                .map(MovieResponse::fromEntity)
+            .map(this::mapMovieToResponse)
                 .collect(Collectors.toList());
     }
     
@@ -60,7 +63,7 @@ public class MovieService {
         systemLogService.save("API_REQUEST", "/api/movies/search", "anonymous", "unknown",
                 "keyword=" + keyword);
         return movieRepository.findByTitleContainingIgnoreCaseAndStatus(keyword, Movie.MovieStatus.PUBLISHED).stream()
-                .map(MovieResponse::fromEntity)
+            .map(this::mapMovieToResponse)
                 .collect(Collectors.toList());
     }
     
@@ -72,7 +75,7 @@ public class MovieService {
                 "Lay chi tiet movie");
         Movie movie = movieRepository.findByIdWithQualities(id)
                 .orElseThrow(() -> new AppException(BaseErrorCode.MOVIE_NOT_FOUND));
-        return MovieResponse.fromEntity(movie);
+        return mapMovieToResponse(movie);
     }
     
     /**
@@ -142,6 +145,17 @@ public class MovieService {
         }
         
         return MovieResponse.fromEntity(movie);
+    }
+
+    private MovieResponse mapMovieToResponse(Movie movie) {
+        Optional<Double> avgValue = movieReviewRepository.calculateAverageRatingByMovieId(movie.getId());
+        long ratingCount = movieReviewRepository.countByMovieId(movie.getId());
+
+        return MovieResponse.fromEntity(
+                movie,
+                avgValue.map(value -> java.math.BigDecimal.valueOf(value).setScale(1, java.math.RoundingMode.HALF_UP)).orElse(null),
+                ratingCount
+        );
     }
     
     /**

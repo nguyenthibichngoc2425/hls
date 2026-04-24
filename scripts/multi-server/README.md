@@ -25,11 +25,13 @@ bash scripts/multi-server/start-server-b.sh
 bash scripts/multi-server/status.sh
 ```
 
-Hoac chay full:
+Hoac chay full (multi-server tren 1 may: infra + server-a + server-b):
 
 ```bash
 bash scripts/multi-server/start-all.sh
 ```
+
+`start-all.sh` da bao gom server-b, khong can chay them neu da dung lenh full.
 
 Dung full:
 

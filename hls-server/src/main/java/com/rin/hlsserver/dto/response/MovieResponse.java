@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.rin.hlsserver.model.Movie;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -27,6 +28,8 @@ public class MovieResponse {
     private String status;
     private Integer processingProgress;
     private String processingError;
+    private BigDecimal averageRating;
+    private Long ratingCount;
     
     private GenreResponse genre;
     private List<VideoQualityResponse> videoQualities;
@@ -38,6 +41,10 @@ public class MovieResponse {
     private LocalDateTime updatedAt;
     
     public static MovieResponse fromEntity(Movie movie) {
+        return fromEntity(movie, null, null);
+    }
+
+    public static MovieResponse fromEntity(Movie movie, BigDecimal averageRating, Long ratingCount) {
         return MovieResponse.builder()
                 .id(movie.getId())
                 .title(movie.getTitle())
@@ -51,6 +58,8 @@ public class MovieResponse {
                 .status(movie.getStatus().name())
                 .processingProgress(movie.getProcessingProgress())
                 .processingError(movie.getProcessingError())
+                .averageRating(averageRating)
+                .ratingCount(ratingCount)
                 .genre(movie.getGenre() != null ? GenreResponse.fromEntity(movie.getGenre()) : null)
                 .videoQualities(movie.getVideoQualities() != null ? 
                         movie.getVideoQualities().stream()

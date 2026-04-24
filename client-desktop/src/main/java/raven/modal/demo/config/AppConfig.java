@@ -9,7 +9,7 @@ import java.util.Properties;
 public class AppConfig {
 
     private static final Properties props = new Properties();
-    private static final String DEFAULT_API_BASE_URL = "http://localhost:8080/api";
+    private static final String DEFAULT_API_BASE_URL = "http://172.22.64.1:8080/api";
 
     static {
         loadProperties();

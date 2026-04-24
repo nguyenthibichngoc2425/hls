@@ -3,6 +3,7 @@ package raven.modal.demo.dto.response;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -24,6 +25,8 @@ public class MovieResponse {
     private String status; // DRAFT, PROCESSING, PUBLISHED, FAILED
     private Integer processingProgress; // 0-100
     private String processingError;
+    private BigDecimal averageRating;
+    private Long ratingCount;
     
     private GenreResponse genre;
     private List<VideoQualityResponse> videoQualities;

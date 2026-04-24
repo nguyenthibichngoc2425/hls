@@ -4,9 +4,13 @@ import com.formdev.flatlaf.FlatClientProperties;
 import net.miginfocom.swing.MigLayout;
 import raven.modal.Toast;
 import raven.modal.demo.api.FavoriteApi;
+import raven.modal.demo.api.ReviewApi;
 import raven.modal.demo.api.WatchHistoryApi;
+import raven.modal.demo.dto.request.MovieReviewRequest;
 import raven.modal.demo.dto.response.ApiResponse;
+import raven.modal.demo.dto.response.MovieRatingSummaryResponse;
 import raven.modal.demo.dto.response.MovieResponse;
+import raven.modal.demo.dto.response.MovieReviewResponse;
 import raven.modal.demo.menu.MyDrawerBuilder;
 import raven.modal.demo.system.Form;
 
@@ -15,16 +19,22 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.net.URL;
-import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class FormMovieDetail extends Form {
     
     private final MovieResponse movie;
-    private ImageIcon movieImageIcon;
+    private JPanel contentContainer;
     private JLabel imageLabel;
     private JButton favoriteButton;
     private boolean isFavorited = false;
+    private JLabel ratingSummaryLabel;
+    private JSpinner ratingSpinner;
+    private JTextArea reviewCommentArea;
+    private JButton submitReviewButton;
+    private JPanel reviewsListPanel;
     
     private Long getCurrentUserId() {
         var user = MyDrawerBuilder.getInstance().getUser();
@@ -38,25 +48,41 @@ public class FormMovieDetail extends Form {
         saveWatchHistory();
         // Kiểm tra trạng thái yêu thích
         checkFavoriteStatus();
+        // Load review và thống kê rating
+        loadReviewsAndSummary();
     }
     
     private void init() {
-        setLayout(new MigLayout("wrap,fillx,insets 20", "[fill]", "[]10[]"));
+        setLayout(new BorderLayout());
+
+        contentContainer = new JPanel(new MigLayout("wrap,fill,insets 18 20 18 20,hidemode 3", "[fill]", "[]16[]16[grow,fill]16[]"));
+        contentContainer.setOpaque(false);
+
+        JScrollPane pageScrollPane = new JScrollPane(contentContainer);
+        pageScrollPane.setBorder(BorderFactory.createEmptyBorder());
+        pageScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        pageScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        pageScrollPane.getVerticalScrollBar().setUnitIncrement(16);
+        add(pageScrollPane, BorderLayout.CENTER);
         
         // Title
         JLabel titleLabel = new JLabel(movie.getTitle());
         titleLabel.setFont(new Font("Arial", Font.BOLD, 28));
         titleLabel.putClientProperty(FlatClientProperties.STYLE, "foreground:$Component.accentColor");
-        add(titleLabel, "wrap");
+        contentContainer.add(titleLabel, "wrap");
         
         // Main content panel with image and details
-        JPanel contentPanel = new JPanel(new MigLayout("", "[300!]20[grow,fill]", "[grow,fill]"));
+        JPanel contentPanel = new JPanel(new MigLayout("insets 14,fillx", "[300!]20[grow,fill]", "[top]"));
+        contentPanel.putClientProperty(FlatClientProperties.STYLE,
+            "arc:16;border:1,1,1,1,$Component.borderColor;background:lighten($Panel.background,2%)");
         
         // Left side - Movie poster
         JPanel imagePanel = new JPanel(new BorderLayout());
+        imagePanel.setOpaque(false);
         imageLabel = new JLabel("⏳ Đang tải ảnh...", SwingConstants.CENTER);
         imageLabel.setPreferredSize(new Dimension(300, 420));
-        imageLabel.setBorder(BorderFactory.createLineBorder(Color.GRAY, 1));
+        imageLabel.putClientProperty(FlatClientProperties.STYLE,
+            "arc:12;border:1,1,1,1,$Component.borderColor;background:$Panel.background");
         imagePanel.add(imageLabel, BorderLayout.CENTER);
         contentPanel.add(imagePanel);
         
@@ -64,7 +90,8 @@ public class FormMovieDetail extends Form {
         loadMovieImage();
         
         // Right side - Movie details
-        JPanel detailsPanel = new JPanel(new MigLayout("wrap 2,fillx", "[120!,right]10[grow,fill]", "[]10[]"));
+        JPanel detailsPanel = new JPanel(new MigLayout("wrap 2,fillx,insets 2", "[130!,right]12[grow,fill]", "[]8[]"));
+        detailsPanel.setOpaque(false);
 
         
         // Status
@@ -121,10 +148,13 @@ public class FormMovieDetail extends Form {
         }
         
         contentPanel.add(detailsPanel);
-        add(contentPanel, "growx");
+        contentContainer.add(contentPanel, "growx");
+
+        contentContainer.add(createReviewPanel(), "grow,pushy");
         
-        // Action buttons
-        JPanel buttonPanel = new JPanel(new MigLayout("insets 20 0 0 0", "[grow,right][]10[]"));
+        // Action buttons (fixed at bottom, outside scroll area)
+        JPanel buttonPanel = new JPanel(new MigLayout("insets 8 20 12 20", "[grow,right][]10[]"));
+        buttonPanel.setOpaque(false);
         
         // Favorite button
         favoriteButton = new JButton(isFavorited ? "💖 Đã yêu thích" : "🤍 Yêu thích");
@@ -165,7 +195,76 @@ public class FormMovieDetail extends Form {
         });
         
         buttonPanel.add(watchButton);
-        add(buttonPanel, "growx");
+        add(buttonPanel, BorderLayout.SOUTH);
+    }
+
+    private JPanel createReviewPanel() {
+        JPanel reviewPanel = new JPanel(new MigLayout("wrap,fill,insets 14", "[grow,fill]", "[]12[]12[grow,fill]"));
+        reviewPanel.putClientProperty(FlatClientProperties.STYLE,
+            "arc:16;border:1,1,1,1,$Component.borderColor;background:lighten($Panel.background,3%)");
+
+        JPanel headerPanel = new JPanel(new MigLayout("insets 0,fillx", "[grow]", "[]"));
+        headerPanel.setOpaque(false);
+
+        JLabel sectionTitle = new JLabel("Đánh giá & bình luận");
+        sectionTitle.setFont(sectionTitle.getFont().deriveFont(Font.BOLD, 18f));
+        headerPanel.add(sectionTitle, "split 2");
+
+        ratingSummaryLabel = new JLabel(buildRatingSummaryText(movie.getAverageRating(), movie.getRatingCount()));
+        ratingSummaryLabel.putClientProperty(FlatClientProperties.STYLE,
+            "foreground:$Component.accentColor;font:bold +2");
+        headerPanel.add(ratingSummaryLabel, "gapleft push");
+        reviewPanel.add(headerPanel, "growx");
+
+        JPanel inputCard = new JPanel(new MigLayout("wrap 2,fillx,insets 12", "[110!,right]12[grow,fill]", "[]10[]10[]"));
+        inputCard.putClientProperty(FlatClientProperties.STYLE,
+            "arc:12;border:1,1,1,1,$Component.borderColor;background:$Panel.background");
+
+        inputCard.add(new JLabel("Chấm điểm:"));
+
+        ratingSpinner = new JSpinner(new SpinnerNumberModel(5, 1, 5, 1));
+        ratingSpinner.setPreferredSize(new Dimension(84, 30));
+        inputCard.add(ratingSpinner, "left,w 90!");
+
+        inputCard.add(new JLabel("Bình luận:"), "top");
+        reviewCommentArea = new JTextArea(4, 40);
+        reviewCommentArea.setLineWrap(true);
+        reviewCommentArea.setWrapStyleWord(true);
+        reviewCommentArea.putClientProperty(FlatClientProperties.STYLE,
+            "border:6,8,6,8,$Component.borderColor,1,8");
+        JScrollPane reviewScrollPane = new JScrollPane(reviewCommentArea);
+        reviewScrollPane.setPreferredSize(new Dimension(0, 110));
+        inputCard.add(reviewScrollPane, "growx");
+
+        submitReviewButton = new JButton("Gửi đánh giá");
+        submitReviewButton.putClientProperty(FlatClientProperties.STYLE,
+                "borderWidth:0;focusWidth:1;arc:10;background:$Component.accentColor;foreground:#fff");
+        submitReviewButton.addActionListener(e -> submitReview());
+        inputCard.add(submitReviewButton, "skip 1,growx,h 34!");
+
+        reviewPanel.add(inputCard, "growx");
+
+        JPanel listCard = new JPanel(new MigLayout("wrap,fill,insets 12", "[grow,fill]", "[][grow,fill]"));
+        listCard.putClientProperty(FlatClientProperties.STYLE,
+            "arc:12;border:1,1,1,1,$Component.borderColor;background:$Panel.background");
+        JLabel listTitle = new JLabel("Bình luận gần đây");
+        listTitle.setFont(listTitle.getFont().deriveFont(Font.BOLD, 14f));
+        listCard.add(listTitle, "growx");
+
+        reviewsListPanel = new JPanel();
+        reviewsListPanel.setLayout(new BoxLayout(reviewsListPanel, BoxLayout.Y_AXIS));
+        reviewsListPanel.setOpaque(false);
+        JScrollPane listScrollPane = new JScrollPane(reviewsListPanel);
+        listScrollPane.getVerticalScrollBar().setUnitIncrement(14);
+        listScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        listScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        listScrollPane.setPreferredSize(new Dimension(0, 320));
+        listScrollPane.setMinimumSize(new Dimension(0, 220));
+        listCard.add(listScrollPane, "grow,pushy,hmin 240");
+
+        reviewPanel.add(listCard, "grow,pushy");
+
+        return reviewPanel;
     }
     
     private void addDetailRow(JPanel panel, String label, String value) {
@@ -173,7 +272,7 @@ public class FormMovieDetail extends Form {
         labelComponent.setFont(labelComponent.getFont().deriveFont(Font.BOLD));
         panel.add(labelComponent, "aligny top");
         
-        JLabel valueComponent = new JLabel("<html>" + value + "</html>");
+        JLabel valueComponent = new JLabel("<html><div style=\"line-height:1.4;\">" + value + "</div></html>");
         panel.add(valueComponent, "growx");
     }
     
@@ -335,5 +434,153 @@ public class FormMovieDetail extends Form {
     
     private void updateFavoriteButton() {
         favoriteButton.setText(isFavorited ? "💖 Đã yêu thích" : "🤍 Yêu thích");
+    }
+
+    private void loadReviewsAndSummary() {
+        new SwingWorker<ReviewPageResult, Void>() {
+            @Override
+            protected ReviewPageResult doInBackground() {
+                try {
+                    ApiResponse<MovieRatingSummaryResponse> summaryResponse = ReviewApi.getMovieRatingSummary(movie.getId());
+                    ApiResponse<List<MovieReviewResponse>> reviewsResponse = ReviewApi.getMovieReviews(movie.getId(), 0, 20);
+
+                    MovieRatingSummaryResponse summary = summaryResponse != null && summaryResponse.getCode() == 200
+                            ? summaryResponse.getResult()
+                            : null;
+                    List<MovieReviewResponse> reviews = reviewsResponse != null && reviewsResponse.getCode() == 200
+                            ? reviewsResponse.getResult()
+                            : java.util.Collections.emptyList();
+
+                    return new ReviewPageResult(summary, reviews);
+                } catch (Exception e) {
+                    System.err.println("Error loading reviews: " + e.getMessage());
+                    return new ReviewPageResult(null, java.util.Collections.emptyList());
+                }
+            }
+
+            @Override
+            protected void done() {
+                try {
+                    ReviewPageResult result = get();
+                    if (result.summary != null) {
+                        ratingSummaryLabel.setText(buildRatingSummaryText(
+                                result.summary.getAverageRating(),
+                                result.summary.getRatingCount()
+                        ));
+                    }
+                    renderReviews(result.reviews);
+                } catch (Exception e) {
+                    System.err.println("Error rendering reviews: " + e.getMessage());
+                }
+            }
+        }.execute();
+    }
+
+    private void submitReview() {
+        submitReviewButton.setEnabled(false);
+
+        new SwingWorker<ApiResponse<MovieReviewResponse>, Void>() {
+            @Override
+            protected ApiResponse<MovieReviewResponse> doInBackground() {
+                MovieReviewRequest request = MovieReviewRequest.builder()
+                        .userId(getCurrentUserId())
+                        .rating((Integer) ratingSpinner.getValue())
+                        .comment(reviewCommentArea.getText())
+                        .build();
+                return ReviewApi.upsertReview(movie.getId(), request);
+            }
+
+            @Override
+            protected void done() {
+                try {
+                    ApiResponse<MovieReviewResponse> response = get();
+                    if (response != null && response.getCode() == 200) {
+                        Toast.show(FormMovieDetail.this, Toast.Type.SUCCESS, "Đã gửi đánh giá thành công");
+                        reviewCommentArea.setText("");
+                        loadReviewsAndSummary();
+                    } else {
+                        Toast.show(FormMovieDetail.this, Toast.Type.ERROR,
+                                "Không thể gửi đánh giá: " + (response != null ? response.getMessage() : "Unknown"));
+                    }
+                } catch (Exception e) {
+                    Toast.show(FormMovieDetail.this, Toast.Type.ERROR, "Lỗi gửi đánh giá: " + e.getMessage());
+                } finally {
+                    submitReviewButton.setEnabled(true);
+                }
+            }
+        }.execute();
+    }
+
+    private void renderReviews(List<MovieReviewResponse> reviews) {
+        reviewsListPanel.removeAll();
+
+        if (reviews == null || reviews.isEmpty()) {
+            JLabel emptyLabel = new JLabel("Chưa có bình luận nào.");
+            emptyLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+            reviewsListPanel.add(emptyLabel);
+        } else {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+            for (MovieReviewResponse review : reviews) {
+                JPanel item = new JPanel(new MigLayout("wrap,fillx,insets 10", "[fill]", "[]6[]6[]"));
+                item.putClientProperty(FlatClientProperties.STYLE,
+                        "arc:10;border:1,1,1,1,$Component.borderColor;background:lighten($Panel.background,6%)");
+
+                String author = review.getUserFullName() != null && !review.getUserFullName().isBlank()
+                        ? review.getUserFullName()
+                        : "Người dùng";
+                JLabel userLabel = new JLabel(author + "  " + renderStars(review.getRating()));
+                userLabel.setFont(userLabel.getFont().deriveFont(Font.BOLD));
+                item.add(userLabel, "growx");
+
+                String comment = review.getComment() == null || review.getComment().isBlank()
+                        ? "(Không có bình luận)"
+                        : review.getComment();
+                JLabel commentLabel = new JLabel("<html>" + escapeHtml(comment).replace("\n", "<br>") + "</html>");
+                item.add(commentLabel, "growx");
+
+                String timeText = review.getUpdatedAt() != null ? review.getUpdatedAt().format(formatter) : "";
+                JLabel timeLabel = new JLabel(timeText);
+                timeLabel.putClientProperty(FlatClientProperties.STYLE, "foreground:shade($Label.foreground,35%)");
+                item.add(timeLabel, "right");
+
+                reviewsListPanel.add(item);
+                reviewsListPanel.add(Box.createVerticalStrut(8));
+            }
+        }
+
+        reviewsListPanel.revalidate();
+        reviewsListPanel.repaint();
+    }
+
+    private String buildRatingSummaryText(java.math.BigDecimal averageRating, Long ratingCount) {
+        long count = ratingCount != null ? ratingCount : 0;
+        if (averageRating == null || count == 0) {
+            return "Chưa có đánh giá";
+        }
+        return "⭐ " + averageRating + "/5 (" + count + " lượt)";
+    }
+
+    private String renderStars(Integer rating) {
+        int value = rating != null ? Math.max(1, Math.min(5, rating)) : 1;
+        return "★".repeat(value) + "☆".repeat(5 - value);
+    }
+
+    private String escapeHtml(String text) {
+        return text
+                .replace("&", "&amp;")
+                .replace("<", "&lt;")
+                .replace(">", "&gt;")
+                .replace("\"", "&quot;")
+                .replace("'", "&#39;");
+    }
+
+    private static class ReviewPageResult {
+        private final MovieRatingSummaryResponse summary;
+        private final List<MovieReviewResponse> reviews;
+
+        private ReviewPageResult(MovieRatingSummaryResponse summary, List<MovieReviewResponse> reviews) {
+            this.summary = summary;
+            this.reviews = reviews;
+        }
     }
 }
