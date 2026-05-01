@@ -42,6 +42,20 @@ public class Http {
                 client.send(request, HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8));
 
         String respBody = response.body();
+        
+        // Log request details for debugging
+        System.out.println("[HTTP DEBUG] POST " + BASE_URL + path);
+        System.out.println("[HTTP DEBUG] Status Code: " + response.statusCode());
+        System.out.println("[HTTP DEBUG] Content-Type: " + response.headers().firstValue("content-type").orElse("N/A"));
+        System.out.println("[HTTP DEBUG] Response Preview: " + respBody.substring(0, Math.min(100, respBody.length())));
+        
+        // Check if response is HTML (error page) instead of JSON
+        if (respBody.trim().startsWith("<")) {
+            throw new Exception("Nhận được HTML thay vì JSON từ server. Có thể server không khả dụng hoặc Nginx không được cấu hình đúng.\n" +
+                    "Server URL: " + BASE_URL + path + "\n" +
+                    "Status: " + response.statusCode() + "\n" +
+                    "Response: " + respBody.substring(0, Math.min(200, respBody.length())));
+        }
 
         // ❗ Không check statusCode ở đây nữa
         // Vì dù 200 hay 400/401/500... thì body vẫn là ApiResponse
@@ -59,6 +73,21 @@ public class Http {
                 client.send(request, HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8));
 
         String respBody = response.body();
+        
+        // Log request details for debugging
+        System.out.println("[HTTP DEBUG] GET " + BASE_URL + path);
+        System.out.println("[HTTP DEBUG] Status Code: " + response.statusCode());
+        System.out.println("[HTTP DEBUG] Content-Type: " + response.headers().firstValue("content-type").orElse("N/A"));
+        System.out.println("[HTTP DEBUG] Response Preview: " + respBody.substring(0, Math.min(100, respBody.length())));
+        
+        // Check if response is HTML (error page) instead of JSON
+        if (respBody.trim().startsWith("<")) {
+            throw new Exception("Nhận được HTML thay vì JSON từ server. Có thể server không khả dụng hoặc Nginx không được cấu hình đúng.\n" +
+                    "Server URL: " + BASE_URL + path + "\n" +
+                    "Status: " + response.statusCode() + "\n" +
+                    "Response: " + respBody.substring(0, Math.min(200, respBody.length())));
+        }
+        
         return mapper.readValue(respBody, typeRef);
     }
 
@@ -75,6 +104,21 @@ public class Http {
                 client.send(request, HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8));
 
         String respBody = response.body();
+        
+        // Log request details for debugging
+        System.out.println("[HTTP DEBUG] PUT " + BASE_URL + path);
+        System.out.println("[HTTP DEBUG] Status Code: " + response.statusCode());
+        System.out.println("[HTTP DEBUG] Content-Type: " + response.headers().firstValue("content-type").orElse("N/A"));
+        System.out.println("[HTTP DEBUG] Response Preview: " + respBody.substring(0, Math.min(100, respBody.length())));
+        
+        // Check if response is HTML (error page) instead of JSON
+        if (respBody.trim().startsWith("<")) {
+            throw new Exception("Nhận được HTML thay vì JSON từ server. Có thể server không khả dụng hoặc Nginx không được cấu hình đúng.\n" +
+                    "Server URL: " + BASE_URL + path + "\n" +
+                    "Status: " + response.statusCode() + "\n" +
+                    "Response: " + respBody.substring(0, Math.min(200, respBody.length())));
+        }
+        
         return mapper.readValue(respBody, typeRef);
     }
 
@@ -89,7 +133,21 @@ public class Http {
                 client.send(request, HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8));
 
         String respBody = response.body();
+        
+        // Log request details for debugging
+        System.out.println("[HTTP DEBUG] DELETE " + BASE_URL + path);
+        System.out.println("[HTTP DEBUG] Status Code: " + response.statusCode());
+        System.out.println("[HTTP DEBUG] Content-Type: " + response.headers().firstValue("content-type").orElse("N/A"));
+        System.out.println("[HTTP DEBUG] Response Preview: " + respBody.substring(0, Math.min(100, respBody.length())));
+        
+        // Check if response is HTML (error page) instead of JSON
+        if (respBody.trim().startsWith("<")) {
+            throw new Exception("Nhận được HTML thay vì JSON từ server. Có thể server không khả dụng hoặc Nginx không được cấu hình đúng.\n" +
+                    "Server URL: " + BASE_URL + path + "\n" +
+                    "Status: " + response.statusCode() + "\n" +
+                    "Response: " + respBody.substring(0, Math.min(200, respBody.length())));
+        }
+        
         return mapper.readValue(respBody, typeRef);
     }
 }
-

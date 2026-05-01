@@ -7,7 +7,7 @@ spring:
             - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
     jpa:
         hibernate:
-            ddl-auto: none
+            ddl-auto: update
         show-sql: false
         properties:
             hibernate:
@@ -24,6 +24,9 @@ app:
         signerKey: HDKdDVDEpABtpunTzN2QM2pbmVzDP5jht6WGykegNKgsKDVdDlbzFVmU1vDOVOHV
     hls:
         storage-path: C:\hls\data
+    ffmpeg:
+        use-cuda: false
+        segment-duration: 6
     simulation:
         viewer:
             max-active-per-server: 2

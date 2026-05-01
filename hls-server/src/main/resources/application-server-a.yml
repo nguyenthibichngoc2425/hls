@@ -4,6 +4,9 @@ server:
 app:
   server-name: SERVER-A
   server-id: A
+  ffmpeg:
+    use-cuda: false
+    segment-duration: 6
   simulation:
     failureRate: ${APP_SIMULATION_FAILURE_RATE:0.0}
     viewer:
