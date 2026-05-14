@@ -75,9 +75,10 @@ docker compose up -d postgres nginx
 
 echo "[DEMO] Starting Spring Boot server A and B (non-docker)..."
 start_backend "server-a" "server-a" "8081"
-start_backend "server-b" "server-b" "8082"
 
 wait_for_backend "server-a" "8081"
+
+start_backend "server-b" "server-b" "8082"
 wait_for_backend "server-b" "8082"
 
 echo "[DEMO] Done."
